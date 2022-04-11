@@ -5,6 +5,8 @@
 layout: home
 ---
 
-## This is a homepage header
+## Who am I
 
-this is a really cool homepage paragraph ldjfalksdfadkf.j nslfjak.hsdbflsj.h albfkjsfmalshdkf.hb nalvk.jbdfslnk.bajsnv lja.khJFBalkd.j nfkb.jdkhdlk.f ;dfk.ajbsdhf;ds/lmas; jv/lhkfdpjao;.sdl nal/dkfjsad;ifhjblsdkf.n s,/v lsd lkds.
+I am a video game developer. I work for fun in my free time so my projects do take a while. However, I'm hoping to someday make some money off of my games & other projects. I see myself becoming a "content creator" as I develop skills beyond programming into animations, modelling, video editing, etc..
+
+
