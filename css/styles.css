@@ -11415,7 +11415,7 @@ footer.footer {
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
-footer.footer .social-link {
+.social-link {
   display: block;
   text-decoration: none;
   height: 4rem;
@@ -11553,7 +11553,7 @@ footer.footer .social-link:hover {
 .parallax_div {
 
   height: 100%;
-  background-color: #000;
+  background-color: var(--bs-dark);
 
   background-attachment: fixed;
   background-position: center;
@@ -11563,6 +11563,7 @@ footer.footer .social-link:hover {
   display: flex;
   align-items: center;
   justify-items: center;
+  flex-flow: column;
 
 }
 .parallax_img {
@@ -11588,6 +11589,12 @@ footer.footer .social-link:hover {
 .flex-box-horizontal-wrapped {
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.flex-box-column-wrapped {
+  display: flex;
+  flex-flow: column wrap;
   justify-content: space-around;
   align-items: center;
 }
