@@ -1,6 +1,6 @@
 {
     "test-game" : {
-        "motd" : "It's a wonderful message of the day!",
+        "motd" : "A second MOTD for you today!",
         "sequel" : "null",
         "sponsored-video" : "null"
     }
