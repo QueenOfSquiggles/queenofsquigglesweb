@@ -1,0 +1,8 @@
+{
+    "example-element" : {
+        "meta" : "This is an example element with a web-hosted image, not necessarily hosted on the same webpage as this one! use ${HOME} in the image link to make it link within this root folder, omit it to open up to the WWW",
+        "link" : "https://tech.lgbt/@queenofsquiggles",
+        "img" : "https://i.huffpost.com/gen/1555877/images/o-PARTY-facebook.jpg",
+        "text" : "A web-loaded button!"
+    }
+}
