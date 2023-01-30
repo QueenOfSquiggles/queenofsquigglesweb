@@ -1,12 +1,12 @@
 {
-    "social-button" : {
-        "link" : "https://www.youtube.com/channel/UCIh0Th1EBpFlvcKYWld0OsQ",
-        "img" : "https://pngimg.com/uploads/trollface/trollface_PNG48.png",
-        "text" : "I'm still making this part lol!"
-    },
     "special-video" : {
         "link" : "https://www.youtube.com/channel/UCIh0Th1EBpFlvcKYWld0OsQ",
-        "img" : "https://pngimg.com/uploads/trollface/trollface_PNG48.png",
-        "text" : "An early player!?"
+        "img" : "https://queenofsquiggles.github.io/data/where_the_dead_lie/yt_icon.jpg",
+        "text" : "Check out my YouTube channel"
+    },
+    "social-button" : {
+        "link" : "https://queenofsquiggles.itch.io/",
+        "img" : "https://queenofsquiggles.github.io/data/where_the_dead_lie/itch_icon.jpg",
+        "text" : "Play more of my games!"
     }
 }
