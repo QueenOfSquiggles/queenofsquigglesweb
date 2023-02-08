@@ -123,13 +123,15 @@ author:
 # Site Footer
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      # url:
-
+  - label: "Mastodon (Fediverse)"
+    icon: "fab fa-fw fa-mastodon"
+    url: "https://mastodon.gamedev.place/@ofsquiggles"
+  - label: "GitHub"
+    icon: "fab fa-fw fa-github"
+    url: "https://github.com/QueenOfSquiggles"
+  - label: "ItchIO - Games"
+    icon: "fab fa-fw fa-itch-io"
+    url: "https://queenofsquiggles.itch.io"
 
 # Reading Files
 include:
