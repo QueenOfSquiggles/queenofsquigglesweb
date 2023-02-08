@@ -7,6 +7,9 @@ categories:
 tags:
   - blog meta
   - intro
+toc: true
+toc_sticky: true
+excerpt: "An introduction of this blog and website in general"
 ---
 
 # Introduction

@@ -1,12 +1,10 @@
 # main links
 main:
   - title: "Home"
-    url: https://queenofsquiggles.github.io/
+    url: /
   - title: "About"
-    url: https://queenofsquiggles.github.io/about/
-  - title: "Posts Yearly"
-    url: /year-archive/
-  - title: "Posts Collections"
-    url: /collection-archive/
+    url: /about/
+  - title: "Blog"
+    url: /blog-home/
   - title: "Sitemap"
     url: /sitemap/
