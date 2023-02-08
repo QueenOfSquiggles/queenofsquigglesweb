@@ -1,5 +1,6 @@
 ---
 title: "Blog Introduction"
+excerpt: "An introduction of this blog and website in general"
 header:
   image: /assets/images/banner.jpg
 categories:
@@ -9,7 +10,6 @@ tags:
   - intro
 toc: true
 toc_sticky: true
-excerpt: "An introduction of this blog and website in general"
 ---
 
 # Introduction
