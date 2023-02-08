@@ -4,9 +4,9 @@ main:
     url: https://queenofsquiggles.github.io/
   - title: "About"
     url: https://queenofsquiggles.github.io/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: "Posts Yearly"
+    url: /year-archive/
+  - title: "Posts Collections"
+    url: /collection-archive/
+  - title: "Sitemap"
+    url: /sitemap/
