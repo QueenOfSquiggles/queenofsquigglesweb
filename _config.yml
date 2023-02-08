@@ -106,19 +106,19 @@ analytics:
 author:
   name             : "QueenOfSquiggles"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "A passionate game developer. I love horror and esoteric systems."
-  location         : "Somewhere"
+  bio              : "A passionate game developer. I love horror games and making tools for game development. I also have a focus on accessibility because I feel the Horror Games genre could do a lot more for accessibility."
+  # location         : "Somewhere"
   email            : "thequeenofsquiggles@gmail.com"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:thequeenofsquiggles@gmail.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
+    - label: "Mastodon (Fediverse)"
+      icon: "fab fa-fw fa-mastodon"
+      url: "https://mastodon.gamedev.place/@ofsquiggles"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+      url: "https://github.com/QueenOfSquiggles"
+    - label: "ItchIO - Games"
+      icon: "fab fa-fw fa-itch-io"
+      url: "https://queenofsquiggles.itch.io"
 
 # Site Footer
 footer:
