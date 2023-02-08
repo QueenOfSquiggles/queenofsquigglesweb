@@ -105,7 +105,7 @@ analytics:
 # Site Author
 author:
   name             : "QueenOfSquiggles"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : /assets/images/pfp.png
   bio              : "A passionate game developer. I love horror games and making tools for game development. I also have a focus on accessibility because I feel the Horror Games genre could do a lot more for accessibility."
   # location         : "Somewhere"
   email            : "thequeenofsquiggles@gmail.com"
