@@ -1,7 +1,8 @@
 ---
-title: "Game: Ascension Of The Lamb"
+title: "Ascension Of The Lamb"
 excerpt: "A small horror game made for Go Godot Jam 3"
 layout: splash
+last_modified_at: 2023-02-09
 
 header:
     overlay_image: /assets/images/ascension-of-the-lamb/ascension_header.png
