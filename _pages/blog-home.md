@@ -5,7 +5,7 @@ title: "Blog Home"
 permalink: /blog-home/
 header:
   overlay_color: "#000"
-  overlay_filter: "0.5"
+  overlay_filter: "0.8"
   overlay_image: /assets/images/website-main-banner.png
 
 feature_intro:

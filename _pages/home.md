@@ -3,9 +3,12 @@ layout: splash
 permalink: /
 hidden: true
 header:
-  overlay_color: "#5e616c"
+  overlay_color: "#000"
+  overlay_filter: "0.8"
   overlay_image: /assets/images/website-main-banner.png
-sexcerpt: Queen Of Squiggles's personal website, portfolio, and blog.
+
+excerpt: My personal website, portfolio, and blog.
+
 feature_row:
   - title: "Blog Posts By Year"
     excerpt: "All posts sorted by year"
