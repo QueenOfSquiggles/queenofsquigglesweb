@@ -8,8 +8,6 @@ categories:
 tags:
   - blog meta
   - intro
-toc: true
-toc_sticky: true
 ---
 
 # Introduction

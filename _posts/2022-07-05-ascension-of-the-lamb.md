@@ -1,9 +1,19 @@
 ---
 title: "Game: Ascension Of The Lamb"
 excerpt: "A small horror game made for Go Godot Jam 3"
+layout: splash
 
 header:
-  image: /assets/images/ascension-of-the-lamb/ascension_header.png
+    overlay_image: /assets/images/ascension-of-the-lamb/ascension_header.png
+    overlay_filter: 0.3
+
+    caption: "Screenshot from the Game"
+    actions:
+        -   label: "Source Code"
+            url: "https://github.com/QueenOfSquiggles/gogodot3-horror-game" 
+        -   label: "Game Page"
+            url: "https://queenofsquiggles.itch.io/the-ascension-of-the-lamb" 
+
 
 categories:
   - Games
@@ -11,8 +21,6 @@ tags:
   - game
   - horror
   - game jam
-toc: true
-toc_sticky: true
 
 gallery:
     -   url: /assets/images/ascension-of-the-lamb/ascension_gallery_1.png
