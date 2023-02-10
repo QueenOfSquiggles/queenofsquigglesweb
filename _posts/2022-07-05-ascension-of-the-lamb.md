@@ -12,7 +12,7 @@ header:
     actions:
         -   label: "Source Code"
             url: "https://github.com/QueenOfSquiggles/gogodot3-horror-game" 
-        -   label: "Game Page"
+        -   label: "Tool Page"
             url: "https://queenofsquiggles.itch.io/the-ascension-of-the-lamb" 
 
 
@@ -50,10 +50,9 @@ gallery:
         alt: "A room with a radio lit from behind and couches in the background"
         # title: ""
 ---
-*Note this post is dated for the release of the game. It was orignally written on Feb. 8th, 2023*
 
 # Game Overview
-[*Ascension Of The Lamb*](https://queenofsquiggles.itch.io/the-ascension-of-the-lamb) is a "Retro PBR" game about exploring a mysterious cult bunker. 
+*Ascension Of The Lamb* is a "Retro PBR" game about exploring a mysterious cult bunker. 
 
 # Story of the Creation
 I participated in the [Go Godot Jam 3](https://gogodotjam.com/the-jam/), which to save you a click is a game jam coordinated by the Godot community, specifically 'Redefine Gamedev', who is a fairly active member of the community. The jam was very exciting, with online social events planned for participants and hosted by various well known community members. 
