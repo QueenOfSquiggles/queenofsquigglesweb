@@ -18,7 +18,7 @@ This is my about page. It is currently under construction as I get posts written
 
 ![image-right]({{ "/assets/images/ascension-of-the-lamb/ascension_header.png" | relative_url }})
 
-Still under construction
+This game was made in roughly a week to test my skills as a game developer and the feature of the Godot 4 beta releases.
 
 <a href="/games/where-the-dead-lie/" class="btn btn--info">Read More</a>
 
