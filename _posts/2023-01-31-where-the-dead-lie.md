@@ -15,7 +15,6 @@ header:
         -   label: "Game Page"
             url: "https://queenofsquiggles.itch.io/where-the-dead-lie" 
 
-
 categories:
   - Games
 tags:
@@ -123,7 +122,7 @@ I think in th future, I might make the release sale much shorter. Most of the do
 
 Since the end of the sale, the Pirate Versions have been outpacing the paid versions in terms of releases.
 
-In the future, I'll change a lot in terms of marketing and sale style. I'm hoping that my next game will do much better. I'll be utilizing Godot's "Release Feature" system to manage building demos that are restricted versions of the main game.
+In the future, I'll change a lot in terms of marketing and sale style. I'm hoping that my next game will do much better. I'll be utilizing Godot's ["Release Feature"](https://docs.godotengine.org/en/stable/tutorials/export/feature_tags.html#custom-features) system to manage building demos that are restricted versions of the main game.
 
 # Butler, and Incremental Patches
 
