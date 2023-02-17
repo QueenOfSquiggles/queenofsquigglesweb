@@ -71,3 +71,9 @@ Godot SDF Gen is a small tool I made for myself and others to easily generate "S
 - JavaScript
 - TypeScript
 - Lua
+
+## Other interesting skills
+
+### Writing
+
+I took a class in my final semester of college as an elective for writing short story fiction. I really enjoy writing and making games because both allow me to tell interesting stories. I've included a small collection of my writings in the blog section of this website, under a single category for ease of access. [You can read them here](/categories/#short-stories)
