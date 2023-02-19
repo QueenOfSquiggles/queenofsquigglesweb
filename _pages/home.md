@@ -36,5 +36,5 @@ feature_row:
 
 <p style="font-size:1px">
 <!--I want my website verified on my mastodon, but I'd really prefer the link isn't prominent unless I can style it better-->
-<a rel="me" href="https://mastodon.gamedev.place/@ofsquiggles">Mastodon Verifiation Link</a>
+<a rel="me" href="https://indiepocalypse.social/@queenofsquiggles">Mastodon</a>
 </p>
