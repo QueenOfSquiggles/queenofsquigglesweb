@@ -1,8 +1,8 @@
 ---
 title: "Godot SDF Gen"
 excerpt: "A tool for generating simple SDF textures made with Godot."
-layout: splash
-last_modified_at: 2023-02-09
+layout: single
+last_modified_at: 2023-02-23
 
 header:
     overlay_image: /assets/images/godot-sdf-gen/tool_preview_1.png
@@ -59,3 +59,7 @@ The tool went largely unnoticed by the public. It is available freely, but due t
 *click on images for full resolution*
 
 {% include gallery layout="half" caption="Screenshots from the tool" %}
+
+# Widget
+
+<iframe src="https://itch.io/embed/1538319?dark=true" width="552" height="167" frameborder="0"><a href="https://queenofsquiggles.itch.io/godot-sdf-gen">Godot SDF Gen by QueenOfSquiggles</a></iframe>

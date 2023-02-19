@@ -1,9 +1,9 @@
 ---
-layout: splash
+layout: single
 title: "A Bleeding Heart"
-last_modified_at: 2023-02-17
+last_modified_at: 2023-02-23
 toc: false
-author_profile: false
+author_profile: true
 
 header:
   overlay_color: "#222"
@@ -18,7 +18,7 @@ tags:
 ---
 
 {: .notice--warning}
-# **Content Warning**: This story includes violence, weapons, blood, and potentially disturbing themes. All of my other stories are much less visceral than this one.
+**Content Warning**: This story includes violence, weapons, blood, and potentially disturbing themes. All of my other stories are much less visceral than this one.
 
 {: .text-justify}
 Scarlet had wandered her local Walmart for what felt like days. She couldn’t find what she was looking for. What was she looking for again? Sometimes her mind grew fuzzy but the pangs of hunger would bring her back to reality. Still struggling to remember, but at least cognizant, she would see a few other regulars shambling around the store. No doubt they were searching for their own items as well. To pass the time, she would imagine things. Sometimes she was a very rich lady, clutching a candle-stick as she explored the vastness of her mansion. Or she would imagine that Margaret and her were zoologists, working in a vast zoo. The other patrons would be the zoo animals they took care of. Other times she would imagine that Terry and her were about to be married. They would prepare a wedding registry, excitedly choosing which bake-ware they prefer, which dice were best, which books they liked.

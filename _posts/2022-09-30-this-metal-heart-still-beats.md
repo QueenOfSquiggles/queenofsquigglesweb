@@ -1,8 +1,8 @@
 ---
 title: "This Metal Heart Still Beats"
 excerpt: "A small puzzle game made for Ludum Dare 51"
-layout: splash
-last_modified_at: 2023-02-09
+layout: single
+last_modified_at: 2023-02-23
 
 header:
     overlay_image: /assets/images/this-metal-heart-still-beats/screenshots_1.png
@@ -82,3 +82,7 @@ The game was made for the "Compo" version of the jam, which is 48 hours long ins
 *click on images for full resolution*
 
 {% include gallery layout="half" caption="Screenshots from the tool" %}
+
+# Widget
+
+<iframe src="https://itch.io/embed/1726321?dark=true" width="552" height="167" frameborder="0"><a href="https://queenofsquiggles.itch.io/this-metal-heart-still-beats">This Metal Heart Still Beats by QueenOfSquiggles</a></iframe>

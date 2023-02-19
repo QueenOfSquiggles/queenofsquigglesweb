@@ -1,7 +1,7 @@
 ---
 layout: collection
 title: "Recipes"
-collection: recipes
+collection: short-stories
 permalink: /recipes/
 author_profile: false
 ---

@@ -278,3 +278,19 @@ defaults:
       toc: true
       toc_sticky: true
       show_date: true
+  # # _short-stores
+  # - scope:
+  #     path: ""
+  #     type: short-stories
+  #  values:
+  #     layout: single
+  #     author_profile: true
+  #     read_time: true
+  #     comments: # true
+  #     share: true
+  #     related: true
+  #     toc: false
+  #     toc_sticky: true
+  #     show_date: true
+
+

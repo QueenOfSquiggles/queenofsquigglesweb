@@ -1,8 +1,8 @@
 ---
 title: "Ascension Of The Lamb"
 excerpt: "A small horror game made for Go Godot Jam 3"
-layout: splash
-last_modified_at: 2023-02-09
+layout: single
+last_modified_at: 2023-02-23
 
 header:
     overlay_image: /assets/images/ascension-of-the-lamb/ascension_header.png
@@ -88,3 +88,6 @@ The game did fairly well considering how it was made. Feedback ranged but there 
 I feel that this game was a success for where I was at my experience level for the time. I had some specific goals and I accomplished them. Because I went for an artistic interpretation of the jam theme, it did not do very well. Likewise, I encountered several issues with my workflow such as a lack of experience in Blender, which I used for creating the level geometry, as well as struggling with the 3D capabilities of Godot 3, which uses a fairly outdated [OpenGL ES 3](https://www.khronos.org/opengles/) based rendering engine.
 
 I think like many of my projects, this game served as an opportunity for me to learn. The feedback I got for this game really helped me hone my craft and I am incredibly grateful to everyone involved in the jam for helping me grow.
+
+# Widget
+<iframe src="https://itch.io/embed/1562397?dark=true" width="552" height="167" frameborder="0"><a href="https://queenofsquiggles.itch.io/the-ascension-of-the-lamb">The Ascension Of The Lamb by QueenOfSquiggles</a></iframe>

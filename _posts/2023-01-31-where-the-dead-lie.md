@@ -1,8 +1,8 @@
 ---
 title: "Where The Dead Lie"
 excerpt: "A short horror game made to test out Godot 4's capabilities"
-layout: splash
-last_modified_at: 2023-02-14
+layout: single
+last_modified_at: 2023-02-23
 
 header:
     overlay_image: /assets/images/where-the-dead-lie/wtdl-img-2.png
@@ -139,3 +139,7 @@ For my next project, I'm planning on making a shell script to run through pushin
 *click on images for full resolution*
 
 {% include gallery layout="half" caption="Screenshots from the game" %}
+
+# Widget
+
+<iframe src="https://itch.io/embed/1900264?dark=true" width="552" height="167" frameborder="0"><a href="https://queenofsquiggles.itch.io/where-the-dead-lie">Where The Dead Lie by QueenOfSquiggles</a></iframe>
