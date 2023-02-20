@@ -20,7 +20,7 @@ tags:
 **Content Warning**: This story includes alcohol and threats of violence.
 
 
-Mary sipped on the champagne. The music blaring out of the speakers behind her thumped in her skull. Someone was looking at hear. Moving their mouth, making noise, but saying very little. She recalled how the drink used to burn, leaving her throat too weak to say much.
+Mary sipped on the champagne. The music blaring out of the speakers behind her thumped in her skull. Someone was looking at her. Moving their mouth, making noise, but saying very little. She recalled how the drink used to burn, leaving her throat too weak to say much.
 
 “Thanks for the party,” the person was saying.
 
