@@ -1,11 +1,11 @@
 {
     "special-video" : {
-        "link" : "https://www.youtube.com/channel/UCIh0Th1EBpFlvcKYWld0OsQ",
+        "link" : "null",
         "img" : "https://queenofsquiggles.github.io/data/where_the_dead_lie/yt_icon.jpg",
         "text" : "Video Button"
     },
     "social-button" : {
-        "link" : "https://queenofsquiggles.itch.io/",
+        "link" : "null",
         "img" : "https://queenofsquiggles.github.io/data/where_the_dead_lie/itch_icon.jpg",
         "text" : "Social Button"
     }
