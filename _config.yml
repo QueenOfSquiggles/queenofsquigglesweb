@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "neon" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "en-US"
-title                    : "QueenOfSquiggles Portfolio & Blog"
+title                    : "Queen Of Squiggles"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "QueenOfSquiggles"
@@ -116,7 +116,7 @@ author:
   links:
     - label: "Mastodon (Fediverse)"
       icon: "fab fa-fw fa-mastodon"
-      url: "https://indiepocalypse.social/@queenofsquiggles"
+      url: "https://tech.lgbt/@queenofsquiggles"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/QueenOfSquiggles"
@@ -129,7 +129,7 @@ footer:
   links:
   - label: "Mastodon (Fediverse)"
     icon: "fab fa-fw fa-mastodon"
-    url: "https://mastodon.gamedev.place/@ofsquiggles"
+    url: "https://tech.lgbt/@queenofsquiggles"
   - label: "GitHub"
     icon: "fab fa-fw fa-github"
     url: "https://github.com/QueenOfSquiggles"

@@ -34,7 +34,7 @@ feature_row:
 
 {% include feature_row %}
 
-<p style="font-size:1px">
+<p style="font-size:1px; color: #ffffff00">
 <!--I want my website verified on my mastodon, but I'd really prefer the link isn't prominent unless I can style it better-->
 <a rel="me" href="https://tech.lgbt/@queenofsquiggles">Mastodon</a>
 </p>
