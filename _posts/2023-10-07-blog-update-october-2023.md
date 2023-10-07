@@ -1,8 +1,8 @@
 ---
-title: "Godot Lighting Exploration"
-excerpt: "Playing around with different lighting models available in Godot 4"
+title: "Blog Update 2023"
+excerpt: "An update to what I'm planning for this blog going forwards"
 layout: single
-last_modified_at: 2023-10-05
+last_modified_at: 2023-10-07
 
 header:
   image: /assets/images/banner.jpg
@@ -11,17 +11,6 @@ categories:
   - Blog Meta
 tags:
   - blog meta
-
-gallery:
-    -   url: /assets/images/squiggles-light-example/image1.png
-        image_path: /assets/images/squiggles-light-example/image1.png
-        alt: ""
-    -   url: /assets/images/squiggles-light-example/image2.png
-        image_path: /assets/images/squiggles-light-example/image2.png
-        alt: ""
-    -   url: /assets/images/squiggles-light-example/image4.png
-        image_path: /assets/images/squiggles-light-example/image4.png
-        alt: ""
 ---
 
 # Happy Halloween!
