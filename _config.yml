@@ -110,7 +110,7 @@ analytics:
 author:
   name             : "QueenOfSquiggles"
   avatar           : /assets/images/pfp.png
-  bio              : "A passionate game developer. I love horror games and making tools for game development. I also have a focus on accessibility because I feel the Horror Games genre could do a lot more for accessibility."
+  bio              : "A passionate game developer. I love horror games and making tools for game development. I also have a focus on accessibility because I feel the Horror Games genre could do a lot more for accessibility. I also really love sharing what I've learned!"
   # location         : "Somewhere"
   email            : "thequeenofsquiggles@gmail.com"
   links:
@@ -123,6 +123,9 @@ author:
     - label: "ItchIO - Games"
       icon: "fab fa-fw fa-itch-io"
       url: "https://queenofsquiggles.itch.io"
+    - label: "Support me!"
+      icon: "fab fa-fw fa-coins"
+      url: "https://ko-fi.com/queenofsquiggles"
 
 # Site Footer
 footer:
