@@ -5,22 +5,12 @@ layout: single
 last_modified_at: 2023-10-05
 
 header:
-    overlay_image: /assets/images/squiggles-light-example/image1.png
-    overlay_filter: 0.7
-
-    caption: "Main Example"
-    actions:
-        -   label: "Source Code"
-            url: "https://github.com/QueenOfSquiggles/Godot-Lighting-Capabilities-Test"
-        -   label: "Runnable Build"
-            url: "https://queenofsquiggles.itch.io/squiggles-godot-lighting-demo"
-
+  image: /assets/images/banner.jpg
 
 categories:
-  - Tech
+  - Blog Meta
 tags:
-  - godot
-  - tech discussion
+  - blog meta
 
 gallery:
     -   url: /assets/images/squiggles-light-example/image1.png
@@ -29,75 +19,37 @@ gallery:
     -   url: /assets/images/squiggles-light-example/image2.png
         image_path: /assets/images/squiggles-light-example/image2.png
         alt: ""
-    -   url: /assets/images/squiggles-light-example/image3.png
-        image_path: /assets/images/squiggles-light-example/image3.png
-        alt: ""
     -   url: /assets/images/squiggles-light-example/image4.png
         image_path: /assets/images/squiggles-light-example/image4.png
         alt: ""
 ---
 
-# The goal
+# Happy Halloween!
 
-I recently competed in Ludum Dare 54 (theme "Limited Space"). One of the problems players have mentioned is the poor performance. Mainly this is due to heavy leaning on `VoxelGI` and `SDFGI` which are Godot's premier techniques for rendering realtime global illumination. What I wanted out of this is to explore what is possible with Godot, and what options are available if I want to lean towards supporting end users on lower end hardware.
+Hi there y'all! It's October, a great time to indulge in horror and spooky things. I'm doing something pretty scary myself, and that's trying to use this blog more!
 
-Let's look at the techniques we have available to us!
+# What this blog is for
 
-## SDFGI
+Originally this blog was intended to be a portfolio to help me get a job working in tech, but time and time again I get rejected because "games aren't real experience." So if this blog isn't doing anything helpful for my job prospects, I might as well focus it in more on my interests than anything else!
 
-SDFGI is a light model managed not by a particular node but as a part of the `WorldEnvironment`. The technical details of it go way over my head, but basically it uses the geometry of the scene to approximate(?) the global illumination while making heavy use of Signed Distance Fields
+## Game Post-Mortums
 
-## VoxelGI
+While I'm not a huge fan of the naming, I do like writing up articles talking about the games I've made, why I made them and any challenges I faced while doing so. Additionally I like to talk about any interesting tech problems I had to solve as well. I've definitely lapsed in writing those, so I do have a backlog to work through!
 
-VoxelGI is a semi-realtime model that makes use some some baked data as well as real time calculations. This does limit how fully an environment is able to be lit realistically. However it makes up for that by being quite easy to set up and immediately adds details to the game. The main downside is runtime performance.
+## Tutorials and Informational Guides
 
-## LightmapGI
+If you have already been following my blog, you probably saw my last article, which was definitely in the "Informational Guide" category. I really enjoy sharing information in a way that people can more easily read. Additionally, I want to serve as a way for people to get practice with parts of game development and specifically Godot that they may not have before.
 
-Lightmap Global Illumination uses exclusively pre-baked data. Meaning that while requiring a large file that caches the lighting data, the runtime performance cost is extremely low. (But not zero because nothing is ever easy!)
+I've definitely heard different opinions on shelving my YouTube channel and writing more. But what's most important to me is that I actually have the time to put things out. If I force myself to do YouTube, I don't end up posting anything for months because of the time investment. Whereas with this blog, I'm literally taking the first step of making a YouTube video (writing the script), and posting that directly, with some formatting.
 
-Because the lighting model is baked ahead of time, you can have highly realistic simulated light for a given space. And on top of that, the node automatically places lighting probes based on your settings. Though there is a lightmap probe node if you want to set some specific probe locations.
+## Games Discussions/Reviews
 
-## ReflectionProbe
+Another thing that I really enjoy that I haven't done yet is discussing existing games. I usually jot down notes about different game elements as I play a game and then I refer to those notes when I want to implement a similar result. It's really helpful for those squishy design things like, "I want the player to feel anxious." It's not really a difficult problem to solve, but doing so in a way that also doesn't hurt the overall enjoyment and gameplay mechanics can be incredibly difficult.
 
-Reflection Probe might not be something you think of for lighting model. While extremely useful for creating *reflections*, it also provides some indirect lighting through the reflection contribution. Because of this, it can provide some added light while also making reflections appear more realistic.
+I'm not sure I would be so narcissitic to call myself a games reviewer. But perhaps what I would like to do is rather similar. More so than just pumping out opinions as fast as possible, I like to dig deep. For example, I've been trying to beat *The Forest* pretty much since it came out (arguably starting well before I should have given my age and the content). I want to do this with more games. I've already worked on picking apart notes for *Resident Evil 7*. The only component missing is my hard-mode replay, which got incredibly difficult for me.
 
-However, there are two modes:
-- Update Once
-    - More performant
-    - Does not detect changes
-- Update Always
-    - Slower
-    - Reacts to changes in the scene
+# Closing
 
-So when it comes to reflection probes, you may want to evaluate which mode is most effective for your scene in particular. Because I made a purely static scene for this experiment, I used "Update Once".
+I have strong aspirations. If you've followed me for any length of time you might be skeptical of whether I can actually accomplish this. I think the best I can say is that **I want to do this**. My most common struggle is against the tension between doing what I love, and having an income. So often the two seem to be mutually exclusive. I may start putting a "support me" badge on my posts in hope that people will want to throw me a dollar or two for the information I write. Though without comments implemented on this blog there isn't a lot of back and forth.
 
-# The experiment
-
-This experiment was to create a somewhat interesting scene. I recently saw the new Dune movie and liked the "mars" themes of this asset pack by Kay Lousberg. So I decided to make a desert planet themed scene.
-
-The main reason I opted to use this asset pack (besides looking really cool) is that LightmapGI requires UV2 data from meshes. And Godot can only generate those for `MeshInstance3D` nodes that are using an `ArrayMesh` resource. At least as far as I could tell. With the GLTF models Kay produced, I was able to import them with static light baking enabled (which is **not** on by default)
-
-The experiment was to see if individual light model nodes could all contribute to the same scene, and if disabling individual nodes would affect the illumination contributions negatively.
-
-## Designing a level
-
-With the assets I started to make a little story about a landing zone, some bases set up and trucks moving cargo around. The actual details of it were not super important, the goal was to show off the lighting anyway. But making little stories is one of my joys.
-
-Something I discovered is all of the assets use a single material and texture, and it's their UV coordinates that affect the colour of the mesh. Which is incredibly efficient for space when making a game. However it did not allow me to override individual "materials" of different models. For example I wanted to make the trucks have reflective windshields and more metallic hulls. Instead I opted to duplicate one of the rock meshes and replace the entire material with a slightly rough metallic material. Just to make sure the reflection probes were working as expected.
-
-## Initial bugs
-
-As it would turn out, moving nodes arround, which I did to make the project easier to parse for people hoping to learn from it, actually breaks `LightmapGI` nodes. As it would turn out, `LightmapGI` nodes only search for meshes among their siblings and children (recursively). So if there are components of a specific branch of the scene tree that are inaccessible, the `LightmapGI` will be unable to discover them!
-
-While frustrating at first, this is actually *incredibly* useful! What this means is that you can have individual "segments" of your level with different light maps baked. So you could have a segment that the player will see all the time, and a segment that is only seen in cutscenes and even putting those in the same scene file, you can separate the lightmap baking and even use different settings!
-
-# Results
-
-It appears that layering static and dynamic light model nodes works rather well! There are some artifacts produced when the settings are changed, but it would appear that overall the quality is extremently high!
-
-# Pictures
-
-{% include gallery layout="half" caption="Screenshots (click for larger view)" %}
-
-
-If you want to try out the application for yourself, it's free on my itch. [Download here!](https://queenofsquiggles.itch.io/squiggles-godot-lighting-demo)
+I suppose if you want to contact me, I have a [mastodon account](https://tech.lgbt/@queenofsquiggles) and an [email account](mailto:thequeenofsquiggles@gmail.com).
