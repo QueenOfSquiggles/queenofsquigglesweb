@@ -29,9 +29,6 @@ gallery:
     -   url: /assets/images/squiggles-light-example/image2.png
         image_path: /assets/images/squiggles-light-example/image2.png
         alt: ""
-    -   url: /assets/images/squiggles-light-example/image3.png
-        image_path: /assets/images/squiggles-light-example/image3.png
-        alt: ""
     -   url: /assets/images/squiggles-light-example/image4.png
         image_path: /assets/images/squiggles-light-example/image4.png
         alt: ""
