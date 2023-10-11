@@ -119,13 +119,10 @@ author:
       url: "https://tech.lgbt/@queenofsquiggles"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/QueenOfSquiggles"
+      url: "https://github.com/QueenOfSquiggles"s
     - label: "ItchIO - Games"
       icon: "fab fa-fw fa-itch-io"
       url: "https://queenofsquiggles.itch.io"
-    - label: "Support me!"
-      icon: "fab fa-fw fa-coins"
-      url: "https://ko-fi.com/queenofsquiggles"
 
 # Site Footer
 footer:
