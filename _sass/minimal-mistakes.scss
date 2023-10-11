@@ -38,3 +38,14 @@
 @import "minimal-mistakes/archive";
 @import "minimal-mistakes/sidebar";
 @import "minimal-mistakes/print";
+
+/* My custom overrides */
+
+$serif              : "Roboto" , "PT Serif", Georgia, Times, serif;
+$sans-serif-narrow  : "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+
+$global-font-family : $serif;
+$header-font-family : $sans-serif-narrow;
+
+$paragraph-indent: true; // true, false (default)
+$indent-var: 5em;
