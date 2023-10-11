@@ -1,9 +1,29 @@
+<!--
+
+Embeds a GIF from tenor with some styling to ensure it looks good while not dominating the page
+===
+data-postid: id of the post on tenor (take from embed code)
+data-aspect-ratio: the aspect ratio of the gif (take from embed code)
+url: embed url (take from embed code)
+width: a standard CSS width value to determine how big to display the gif at. (50% usually looks good)
+caption (optional): a text caption that will display below the image and serve as a link to the image.
+
+-->
+
 <div style="margin: auto; width: {{ include.width }}; border: 3px solid black; padding: 10px;">
-    <div class="tenor-gif-embed" data-postid="{{ include.data-postid }}" data-share-method="host" data-aspect-ratio="{{ include.data-aspect-ratio }}" data-width="100%">
-        <a href="{{ include.url }}"/>
+    <div
+        class="tenor-gif-embed"
+        data-postid="{{ include.data-postid }}"
+        data-share-method="host"
+        data-aspect-ratio="{{ include.data-aspect-ratio }}"
+        data-width="100%"
+    >
+        <a href="{{ include.url }}"></a>
     </div>
-    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    <script type="text/javascript" async src="https://tenor.com/embed.js"/></script>
     {% if include.caption %}
-    <i> {{include.caption}} </i>
+        <a href="{{ include.url }}">
+            <i> {{include.caption}} </i>
+        </a>
     {% endif %}
 </div>
