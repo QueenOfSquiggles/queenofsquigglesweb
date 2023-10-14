@@ -34,7 +34,19 @@ feature_row:
 
 {% include feature_row %}
 
-<p style="font-size:1px; color: #ffffff00">
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+{% assign postsByYear = site.posts | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
+{% for year in postsByYear %}
+  <section id="{{ year.name }}" class="taxonomy__section">
+    <h2 class="archive__subtitle">{{ year.name }}</h2>
+    <div class="entries-{{ entries_layout }}">
+      {% for post in year.items %}
+        {% include archive-single.html type=entries_layout %}
+      {% endfor %}
+    </div>
+    <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
+  </section>
+{% endfor %}
+
 <!--I want my website verified on my mastodon, but I'd really prefer the link isn't prominent unless I can style it better-->
-<a rel="me" href="https://tech.lgbt/@queenofsquiggles">Mastodon</a>
-</p>
+<a hidden rel="me" href="https://tech.lgbt/@queenofsquiggles">Mastodon</a>

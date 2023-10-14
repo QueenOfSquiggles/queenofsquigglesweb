@@ -42,7 +42,7 @@ feature_row:
 
 {%include feature_row id="feature_search" type="center"%}
 
-{%include feature_row %}
+{% include feature_row %}
 
 
 # View All Posts
