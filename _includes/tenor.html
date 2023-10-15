@@ -21,9 +21,17 @@ caption (optional): a text caption that will display below the image and serve a
         <a href="{{ include.url }}"></a>
     </div>
     <script type="text/javascript" async src="https://tenor.com/embed.js"/></script>
+    <noscript>
+        {% if include.fallback %}
+            <img src="{{ include.fallback }}"/>
+        {% else %}
+            <p><i><b>No fallback provided!</b></i></p>
+            <br/>
+        {% endif %}
+        <p><b>GIF embed failed. </b><a href="{{ include.url }}">Click to view source.</a></p>
+    </noscript>
     {% if include.caption %}
-        <a href="{{ include.url }}">
-            <i> {{include.caption}} </i>
-        </a>
+        <br/>
+        <b>Caption: </b><i>{{include.caption}} </i>
     {% endif %}
 </div>
