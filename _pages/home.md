@@ -30,11 +30,18 @@ feature_row:
     # Properties to add an image background
     # image_path: /assets/images/mm-free-feature.png
     # alt: ""
+  - title: "See my article backlog"
+    excerpt: "A list of potential article ideas that I want to do eventually..."
+    url: /backlog/
+    btn_class: "btn--primary"
+    btn_label: "See Backlog"
+
 ---
 
 {% include feature_row %}
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
+
 {% assign postsByYear = site.posts | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
 {% for year in postsByYear %}
   <section id="{{ year.name }}" class="taxonomy__section">

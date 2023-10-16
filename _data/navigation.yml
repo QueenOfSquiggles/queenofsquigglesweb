@@ -6,5 +6,7 @@ main:
     url: /about/
   - title: "Blog"
     url: /blog-home/
+  - title: "Backlog"
+    url: /backlog/
   - title: "Sitemap"
     url: /sitemap/
