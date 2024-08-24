@@ -1,0 +1,50 @@
+<!--
+Embeds a GIF from tenor with some styling to ensure it looks good while not dominating the page
+===
+data_postid: id of the post on tenor (take from embed code)
+data_aspect_ratio: the aspect ratio of the gif (take from embed code)
+url: embed url (take from embed code)
+width: a standard CSS width value to determine how big to display the gif at. (50% usually looks good)
+caption (optional): a text caption that will display below the image and serve as a link to the image.
+===
+Example Data:
+data_postid="8246706" 
+data_aspect_ratio="1.43103" 
+width="50%" 
+url='https://tenor.com/view/anime-goku-dbz-dragon-ball-super-saiyan-gif-8246706' 
+caption="Goku from Dragon Ball Z power up to 'super saiyin'" 
+fallback="https://media.tenor.com/XfrqyR_-jzIAAAAC/anime-goku.gif"
+
+-->
+
+
+<!-- 
+-->
+
+<div style="display: flex; flex-direction: column; justify-items: center; align-items: center; ">
+    <div class="{% if background %} bg-{{background}} {% else %} bg-secondary {% endif %} rounded"
+        style="width: 50%; padding: .5rem;">
+        <div class="tenor-gif-embed" data-postid="{{ data_postid }}" data-share-method="host"
+            data-aspect-ratio="{{ data_aspect_ratio }}" data-width="100%">
+        </div>
+    </div>
+    <div>
+
+        <script type="text/javascript" async src="https://tenor.com/embed.js">
+        </script>
+        <noscript>
+            <img src="{{ fallback }}" />
+            <p>
+                <a href="{{ url }}">
+                    <b>GIF embed fallback in use. </b>
+                </a>
+            </p>
+        </noscript>
+    </div>
+    <div class="{% if background %} btn-{{background}} {% else %} btn-secondary {% endif %} rounded-bottom"
+        style="padding: .5rem; max-width: 45%;">
+        <b>Caption: </b>
+        <i>{{ caption }}</i>
+    </div>
+</div>
+<br />

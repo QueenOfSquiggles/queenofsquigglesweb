@@ -1,0 +1,63 @@
+# The URL the site will be built for
+base_url = "https://queenofsquiggles.github.io/"
+
+title = "Queen Of Squiggles's Blog"
+description = "The personal blog for all of the Queen's news, ramblings, portfolio stuffs, and more!"
+default_language = "en"
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+theme = "zolastrap"
+
+minify_html = true
+
+generate_feeds = true
+feed_filenames = ["atom.xml", "rss.xml"]
+
+author = "Queen Of Squiggles"
+
+generate_robots_txt = true
+
+taxonomies = [
+  { name = "tags", feed = true, paginate_by = 5 },
+  # { name = "categories", feed = true },
+]
+
+
+[slugify]
+paths = "on"
+taxonomies = "on"
+anchors = "on"
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+render_emoji = true
+smart_punctuation = true
+# async images
+# lazy_async_image = true
+
+[extra]
+# Put all your custom variables here
+theme = "cyborg"
+search = "Search"
+themes = ""                             # disables theme selection (which appears to be bugged anyway since forking the theme)
+schemes = ""                            # disables scheme selection becuase it's kinda confusing
+email = "thequeenofsquiggles@gmail.com"
+
+# footer icons
+icons = [
+  { title = 'Facebook', icon = 'fab fa-facebook-f', url = 'https://www.facebook.com' },
+  { title = 'Instagram', icon = 'fab fa-instagram', url = 'https://www.instagram.com' },
+  { title = 'Twitter', icon = 'fab fa-twitter', url = 'https://twitter.com' },
+  { title = 'YouTube', icon = 'fab fa-youtube', url = 'https://www.youtube.com' },
+  { title = "RSS Feed", icon = "fas fa-rss", url = "rss.xml" },
+  { title = "Atom Feed", icon = "fal fa-atom", url = "atom.xml" },
+]
+
+# navbar links
+links = [{ title = "Tags", url = "tags" }, { title = 'About', url = 'about' }]

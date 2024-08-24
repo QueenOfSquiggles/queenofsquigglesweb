@@ -1,0 +1,3 @@
+[submodule "themes/zolastrap"]
+	path = themes/zolastrap
+	url = git@github.com:QueenOfSquiggles/zolastrap.git
