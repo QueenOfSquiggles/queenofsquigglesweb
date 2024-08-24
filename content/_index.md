@@ -3,7 +3,6 @@ paginate_by: 15
 sort_by: date
 
 title: All posts
-insert_anchor_links: "right"
 extra:
     before: true
 ---
