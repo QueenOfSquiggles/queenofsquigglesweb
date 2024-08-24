@@ -3,17 +3,21 @@ title: "Choreographer Design Documentation"
 summary: "A snapshot of design specification"
 date: 2023-12-09
 
-categories:
-  - Tech
-tags:
-  - godot
-  - reference
-
-images:
-  - /images/banner.jpg
-
+taxonomies:
+    tags:
+    - godot
+    - reference
+extra:
+    image: /images/banner.jpg
 ---
+
+
+
+
+
 ## Blog Post Note
+
+> **Update (August 24th, 2024)**: This effort/project has since been abandoned. However anyone wishing to take this idea further is quite welcome to!
 
 Hey, this is the same markdown that is in the choreographer git repository. And one is significantly more likely to be updated. This is the version that was initially uploaded on December 19th, 2023. If you are from the future reading this, it is entirely possible the design has changed by some amount to accommodate changes in our reality. Otherwise please enjoy my mess :3
 

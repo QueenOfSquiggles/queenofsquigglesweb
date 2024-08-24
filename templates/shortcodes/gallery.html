@@ -1,12 +1,17 @@
 <div>
+    {% set width = 320 %}
     {% for asset in page.extra.gallery -%}
     {%- if asset is matching("[.](jpg|png)$") -%}
-    {% set width = 320 %}
-    {% set image = resize_image(path=page.colocated_path ~ asset, width=width, op="fit_width", format="webp",
-    quality=75) %}
+    {# Formatted types: JPG, PNG #}
+    {% set image = resize_image(path=page.colocated_path ~ asset, width=width, op="fit_width") %}
     <a href="{{ get_url(path=page.colocated_path ~ asset) }}" target="_blank">
-        <img src="{{ image.url }}" />
+        <img src="{{ asset }}" />
     </a>
+    {%- else -%}
+    {# Non formatted types #}
+        <a href="{{ get_url(path=page.colocated_path ~ asset) }}" target="_blank">
+            <img src="{{ get_url(path=page.colocated_path ~ asset) }}" />
+        </a>
     {%- endif %}
     {%- endfor %}
 </div>
