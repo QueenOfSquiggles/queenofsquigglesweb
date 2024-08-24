@@ -1,7 +1,7 @@
 ---
 title: "Choreographer Design Documentation"
 summary: "A snapshot of design specification"
-date: 2023-12-9
+date: 2023-12-09
 
 categories:
   - Tech
@@ -125,7 +125,8 @@ The organization of the heap is as such:
 
 1. Script local variables (effectively static as variables cannot be de-initialized until the script itself is dropped)
 2. Temporary Event execution memory (dropped upon event completion)
- - An option available to the user could be to choose between memory usage and performance. For example, to save performance costs, the memory heap could simply be nulled (`None`) out rather than resizing the `Vec`. But this could create a memory cost as each execution unit increases the size of the nothing array. The immediate deletion would remove need for some kind of garbage collection system, which I see as a band-aid for bad memory management.
+
+- An option available to the user could be to choose between memory usage and performance. For example, to save performance costs, the memory heap could simply be nulled (`None`) out rather than resizing the `Vec`. But this could create a memory cost as each execution unit increases the size of the nothing array. The immediate deletion would remove need for some kind of garbage collection system, which I see as a band-aid for bad memory management.
 
 Each script is in charge of its own virtual heap memory.
 
