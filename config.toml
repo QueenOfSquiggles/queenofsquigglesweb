@@ -22,7 +22,7 @@ author = "Queen Of Squiggles"
 generate_robots_txt = true
 
 taxonomies = [
-  { name = "tags", feed = true, paginate_by = 5 },
+  { name = "tags", feed = true, paginate_by = 15 },
   # { name = "categories", feed = true },
 ]
 
