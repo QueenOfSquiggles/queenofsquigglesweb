@@ -15,7 +15,7 @@ theme = "zolastrap"
 minify_html = true
 
 generate_feeds = true
-feed_filenames = ["atom.xml", "rss.xml"]
+feed_filenames = ["rss.xml"]
 
 author = "Queen Of Squiggles"
 
@@ -53,7 +53,6 @@ email = "thequeenofsquiggles@gmail.com"
 icons = [
   { title = 'Mastodon', icon = 'fab fa-mastodon', url = 'https://blobfox.coffee/@queenofsquiggles' },
   { title = "RSS Feed", icon = "fas fa-rss", url = "rss.xml" },
-  { title = "Atom Feed", icon = "fal fa-atom", url = "atom.xml" },
 ]
 
 # navbar links
