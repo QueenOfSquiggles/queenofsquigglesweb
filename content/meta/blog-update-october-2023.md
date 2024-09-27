@@ -3,9 +3,6 @@ title: "Blog Update 2023"
 description: "An update to what I'm planning for this blog going forwards"
 date: 2023-10-07
 
-extra:
-  image: /images/banner.jpg
-
 taxonomies:
   tags:
     - blog meta

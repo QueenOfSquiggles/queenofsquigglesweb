@@ -3,9 +3,6 @@ title: "Engine Switch 2024"
 description: "In which I explain why I made the switch from Godot to Bevy"
 date: 2024-09-27
 
-extra:
-  image: /images/banner.jpg
-
 taxonomies:
   tags:
     - blog meta

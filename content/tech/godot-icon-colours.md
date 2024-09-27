@@ -7,9 +7,6 @@ taxonomies:
   tags:
     - godot
     - reference
-extra:
-  image: /images/banner.jpg
-
 ---
 
 ## Colours LUT

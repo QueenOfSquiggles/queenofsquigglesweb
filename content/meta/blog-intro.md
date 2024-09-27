@@ -2,8 +2,6 @@
 title: "Blog Introduction"
 summary: "An introduction of this blog and website in general"
 date: 2023-02-09
-extra:
-  image: /images/banner.jpg
 
 taxonomies:
   tags:

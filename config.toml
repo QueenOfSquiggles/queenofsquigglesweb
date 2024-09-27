@@ -59,6 +59,8 @@ schemes = ""                            # disables scheme selection becuase it's
 email = "thequeenofsquiggles@gmail.com"
 date_format = '%Y/%m/%d'
 
+mastodon = 'https://blobfox.coffee/@queenofsquiggles'
+
 # footer icons
 icons = [
   { title = 'Mastodon', icon = 'fab fa-mastodon', url = 'https://blobfox.coffee/@queenofsquiggles' },
