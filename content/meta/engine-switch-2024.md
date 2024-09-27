@@ -25,7 +25,7 @@ There are a few key areas that I wanna drill down for why I think Bevy is so coo
 >
 > - An engine is an executable software that dispatches your code (typically a scripting language) as it sees fit based on the engine's design
 > - A framework is code that gets compiled (or included for non compiled languages) into your application and takes control of the application's main thread.
-> - A librtary is code that gets compiled into your application but does not take control over the application's main thead (save situations like blocking and sleeping)
+> - A library is code that gets compiled into your application but does not take control over the application's main thead (save situations like blocking and sleeping)
 >
 > It is probably of note that these definitions are distinctly different from existing attempts such as [GameFromScratch][gfs-glossary])
 

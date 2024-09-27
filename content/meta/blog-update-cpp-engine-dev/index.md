@@ -41,7 +41,10 @@ I had two main project goals. One of which is complete with patches added from t
 
 ### A new standard
 
-![XKCD comic referenced](https://imgs.xkcd.com/comics/standards.png)
+{{ img(
+  src="xkcd_standards.png",
+  alt="XKCD's comic 'Standards'"
+)}}
 
 [XKCD reference](https://xkcd.com/927)
 
