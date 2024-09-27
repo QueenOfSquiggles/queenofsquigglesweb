@@ -3,8 +3,10 @@ paginate_by: 15
 sort_by: date
 
 title: All posts
+insert_anchor_links: "none" # primarily affects portfolio
+
 extra:
-    before: true
+    before: false
 ---
 
 ## Blog under reconstruction due to porting to a different static site generator

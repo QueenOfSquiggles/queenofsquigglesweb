@@ -12,8 +12,6 @@ build_search_index = true
 
 theme = "zolastrap"
 
-minify_html = true
-
 generate_feeds = true
 feed_filenames = ["rss.xml"]
 
@@ -29,8 +27,8 @@ taxonomies = [
 
 [slugify]
 paths = "on"
-taxonomies = "on"
-anchors = "on"
+taxonomies = "safe"
+anchors = "safe"
 
 [markdown]
 # Whether to do syntax highlighting
@@ -38,8 +36,19 @@ anchors = "on"
 highlight_code = true
 render_emoji = true
 smart_punctuation = true
+external_links_target_blank = false
+external_links_no_follow = false
+external_links_no_referrer = false
 # async images
 # lazy_async_image = true
+
+[search]
+# Whether to include the title of the page/section in the index
+include_title = true
+include_description = true
+include_date = true
+include_path = true
+include_content = true
 
 [extra]
 # Put all your custom variables here
@@ -48,6 +57,7 @@ search = "Search"
 themes = ""                             # disables theme selection (which appears to be bugged anyway since forking the theme)
 schemes = ""                            # disables scheme selection becuase it's kinda confusing
 email = "thequeenofsquiggles@gmail.com"
+date_format = '%Y/%m/%d'
 
 # footer icons
 icons = [

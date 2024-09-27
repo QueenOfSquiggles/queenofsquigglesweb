@@ -2,7 +2,6 @@
 paginate_by: 5
 sort_by: date
 render: false
-insert_anchor_links: "right"
 transparent: true
 generate_feeds: false
 ---
