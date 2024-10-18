@@ -2,6 +2,7 @@
 title: "Indie Game Design Using Obsidian"
 summary: "A brief guide on how I use the note-taking app 'Obsidian' to design games"
 date: 2024-01-15
+updated: 2024-10-18
 
 taxonomies:
   tags:
@@ -20,6 +21,7 @@ extra:
 ---
 
 > This guide is primarily aimed at game developers who may not have explored options for project organization and management. If that's not you, enjoy learning about my personal workflow
+
 
 ## Obsidian, a note-taking app with (mostly) good features
 

@@ -21,7 +21,6 @@ extra:
       - screenshots_4.png
       - screenshots_3.png
 ---
-{{  project_links() }}
 
 ## Game Overview
 

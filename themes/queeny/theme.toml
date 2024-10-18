@@ -1,0 +1,22 @@
+name = "queeny"
+description = "A theme for zola made with Tailwind CSS, Daisy UI, and a Queen's love"
+license = "MIT"
+homepage = "TBD"
+min_version = "0.0.1"
+demo = "TBD"
+
+[author]
+name = "Queen Of Squiggles"
+homepage = "https://queenofsquiggles.github.io/"
+
+[extra]
+banner = ""
+date_format = '%d/%m/%Y'
+pretty_date_format = "%A the %e of %B, %Y"
+search = 'Search'
+tag = 'Posts by Topic'
+tags = 'Posts by Topics'
+
+links = []
+email = ""
+icons = []

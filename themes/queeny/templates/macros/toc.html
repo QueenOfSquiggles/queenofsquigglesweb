@@ -1,0 +1,49 @@
+{% macro render(page) %}
+{% if page.toc %}
+<div class="flex justify-center">
+    <div class="container max-w-md py-2 justify-start">
+        <ul class="menu bg-base-200 rounded-box">
+            <li class="menu-title text-xl">
+                <h1>
+                    Table of Contents
+                </h1>
+            </li>
+            {% for h1 in page.toc %}
+            <li>
+                <a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
+            </li>
+            {% if h1.children %}
+            <li>
+                <ul>
+                    {% for h2 in h1.children %}
+                    <li>
+
+                        <a href="{{ h2.permalink | safe }}">
+                            {{ h2.title }}
+                        </a>
+                    </li>
+                    {% if h2.children %}
+                    <li>
+                        <ul>
+                            {% for h3 in h2.children %}
+                            <li>
+                                <a href="{{ h3.permalink | safe }}">
+                                    {{ h3.title }}
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                {% endfor %}
+        </ul>
+        </li>
+        </ul>
+    </div>
+
+</div>
+{% endif %}
+{% endmacro %}

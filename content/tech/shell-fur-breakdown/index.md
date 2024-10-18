@@ -29,9 +29,9 @@ Acerola's original video did a breakdown for how shell fur works and demonstrate
  data_postid="8246706",
  data_aspect_ratio="1.43103",
  width="50%",
- url='<https://tenor.com/view/anime-goku-dbz-dragon-ball-super-saiyan-gif-8246706>',
+ url='https://tenor.com/view/anime-goku-dbz-dragon-ball-super-saiyan-gif-8246706',
  caption="Goku from Dragon Ball Z power up to 'super saiyin'",
- fallback="<https://media.tenor.com/XfrqyR_-jzIAAAAC/anime-goku.gif>"
+ fallback="https://media.tenor.com/XfrqyR_-jzIAAAAC/anime-goku.gif"
 )}}
 
 ## Well what is "Shell Fur"?

@@ -1,0 +1,8 @@
+/* 
+    This is a standard Tailwind CSS input CSS file. For now, we just want the default data generated from Tailwind and Daisy
+
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

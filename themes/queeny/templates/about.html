@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% import "macros/toc.html" as toc %}
+
+
+{% block content %}
+
+{{ toc::render(page=page) }}
+
+<div class="flex flex-col justify-center">
+  <article class="prose prose-neutral lg:prose-xl prose-blockquote:{utility} px-2 max-w-none">
+    {{ page.content | safe }}
+  </article>
+</div>
+
+{% endblock content %}

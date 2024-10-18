@@ -1,0 +1,13 @@
+{% macro render(page) %}
+<p class="text-slate text-pretty">
+  {% if page.description %}
+  {% set page_preview = page.description | striptags %}
+  {% elif page.summary %}
+  {% set page_preview = page.summary |striptags %}
+  {% else %}
+  {% set page_preview = page.content | striptags | split(pat=" ") | slice(end=50) | join(sep=" ") %}
+  {% endif %}
+
+  <small>{{page_preview}}</small>
+</p>
+{% endmacro %}

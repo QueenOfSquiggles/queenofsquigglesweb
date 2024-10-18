@@ -23,7 +23,6 @@ extra:
     - url: https://github.com/QueenOfSquiggles/squiggle-pt
       label: Github Source
 ---
-{{  project_links() }}
 
 ## Gruesome Claim
 

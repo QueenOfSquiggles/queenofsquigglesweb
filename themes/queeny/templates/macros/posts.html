@@ -1,0 +1,9 @@
+{% macro render(pages, type="default", row=0) %}
+<div class="container mx-auto justify-center">
+  <div class="flex flex-row flex-wrap gap-4 justify-center">
+    {% for page in pages %}
+    {{post::render(page=page)}}
+    {% endfor %}
+  </div>
+</div>
+{% endmacro %}

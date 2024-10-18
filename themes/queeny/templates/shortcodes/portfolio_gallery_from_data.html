@@ -1,0 +1,8 @@
+{% import "macros/img_link_text.html" as img_link_text %}
+{% set data = load_data(path=page.colocated_path ~ path) %}
+
+<div class="container flex flex-row flex-wrap mx-auto gap-4 justify-center">
+    {% for entry in data %}
+    {{ img_link_text::render(header=entry.header,text=entry.text,img=entry.img,link=entry.link) }}
+    {% endfor %}
+</div>

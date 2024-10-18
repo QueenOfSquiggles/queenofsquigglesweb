@@ -22,8 +22,6 @@ extra:
       label: Github Source
 ---
 
-{{ project_links() }}
-
 ## The goal
 
 I recently competed in Ludum Dare 54 (theme "Limited Space"). One of the problems players have mentioned is the poor performance. Mainly this is due to heavy leaning on `VoxelGI` and `SDFGI` which are Godot's premier techniques for rendering realtime global illumination. What I wanted out of this is to explore what is possible with Godot, and what options are available if I want to lean towards supporting end users on lower end hardware.

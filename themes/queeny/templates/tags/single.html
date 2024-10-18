@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% import "macros/post.html" as post %}
+{% import "macros/posts.html" as posts %}
+{% import "macros/paginator.html" as paginator %}
+
+{% block title %}
+
+{{config.title}} - {{taxonomy.name}}: {{term.name}}
+
+{% endblock %}
+
+{% block content %}
+<div class="flex flex-col flex-wrap w-full justify-center">
+    <div class="w-full divider">
+        <h1>{{taxonomy.name}} - {{term.name}}</h1>
+    </div>
+    <div class="flex flex-row justify-center justify-items-center">
+        {{posts::render(pages=paginator.pages)}}
+
+        {{paginator::render(paginator=paginator)}}
+    </div>
+</div>
+
+{% endblock %}

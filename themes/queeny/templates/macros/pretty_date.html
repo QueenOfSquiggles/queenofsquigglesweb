@@ -1,0 +1,3 @@
+{% macro render(date) %}
+{{ date | date(format=config.extra.pretty_date_format)}}
+{% endmacro %}

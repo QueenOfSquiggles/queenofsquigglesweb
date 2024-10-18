@@ -16,16 +16,41 @@ caption="Goku from Dragon Ball Z power up to 'super saiyin'"
 fallback="https://media.tenor.com/XfrqyR_-jzIAAAAC/anime-goku.gif"
 
 -->
+<div class="flex justify-center">
+    <div class="not-prose card bg-neutral max-w-md">
+        <noscript>
+            <figure>
+                <img src="{{fallback}}" />
+            </figure>
+        </noscript>
+        <div class="card-body m-2">
+            <div class="mask mask-squircle">
 
+                <div class="tenor-gif-embed" data-postid="{{ data_postid }}" data-share-method="host"
+                    data-aspect-ratio="{{ data_aspect_ratio }}" data-width="100%">
+                </div>
+            </div>
+            <script type="text/javascript" async src="https://tenor.com/embed.js">
+            </script>
+            <noscript>
+                <p>
+                    <a href="{{ url }}">
+                        <b>GIF embed fallback in use. </b>
+                    </a>
+                </p>
+            </noscript>
+            <small>{{caption}}</small>
+        </div>
+    </div>
+</div>
 
-<!-- 
--->
+<!--{#
 
 <div style="display: flex; flex-direction: column; justify-items: center; align-items: center; ">
     <div class="{% if background %} bg-{{background}} {% else %} bg-secondary {% endif %} rounded"
         style="width: 50%; padding: .5rem;">
         <div class="tenor-gif-embed" data-postid="{{ data_postid }}" data-share-method="host"
-            data-aspect-ratio="{{ data_aspect_ratio }}" data-width="100%">
+        data-aspect-ratio="{{ data_aspect_ratio }}" data-width="100%">
         </div>
     </div>
     <div>
@@ -48,3 +73,4 @@ fallback="https://media.tenor.com/XfrqyR_-jzIAAAAC/anime-goku.gif"
     </div>
 </div>
 <br />
+#}-->

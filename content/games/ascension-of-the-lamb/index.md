@@ -32,8 +32,6 @@ extra:
 
 ---
 
-{{ project_links() }}
-
 ## Game Overview
 
 *Ascension Of The Lamb* is a "Retro PBR" game about exploring a mysterious cult bunker.

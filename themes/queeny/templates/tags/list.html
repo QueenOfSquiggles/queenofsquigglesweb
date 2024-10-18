@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{config.title}} - {{taxonomy.name}}
+{% endblock %}
+
+{% block content %}
+<div class="w-full flex justify-center">
+  <div class="md:w-1/2 justify-center">
+
+    <div class="divider">
+      <h1>
+        {{config.extra.tags}}
+      </h1>
+    </div>
+
+    <div class="flex py-4 flex-row flex-wrap gap-4 justify-center">
+
+      {% for tag in terms %}
+      <div class="indicator">
+        <span class="indicator-item badge badge-secondary">{{tag.pages | length}}</span>
+        <a class="btn btn-outline rounded-box" href="{{tag.permalink}}">{{tag.name}}</a>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}

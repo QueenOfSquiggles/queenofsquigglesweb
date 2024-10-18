@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% import "macros/toc.html" as toc %}
+{% import "macros/pretty_date.html" as pretty_date %}
+{% block title %}
+
+{{page.title}} | {{config.title}}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="hero bg-base-200 lg:min-h-screen rounded-box">
+  <div class="hero-content flex-col lg:flex-row-reverse">
+    {% if page.extra.image %}
+    <img src="{{ page.extra.image }}" class="container mx-auto rounded-lg shadow-2xl" />
+    {% endif %}
+    <div>
+      <h1 class="text-5xl font-bold"> {{page.title}} </h1>
+      <div class="py-6">
+        {% if page.taxonomies.tags %}
+        <div class="flex flex-row flex-wrap gap-4  py-2">
+          {% for tag in page.taxonomies.tags %}
+          <a href="{{ get_taxonomy_url(kind='tags', name=tag)}}" class="btn btn-secondary rounded-box">
+            {{ tag }}
+          </a>
+          {% endfor %}
+        </div>
+        {% endif %}
+        {% if page.extra.links %}
+        <div class="flex flex-row flex-wrap gap-4 py-2">
+          {% for entry in page.extra.links %}
+          <a href=" {{entry.url}}" class="btn btn-primary rounded-box" role="button" target="_blank"
+            rel="noopener noreferrer">
+            {{ entry.label }}
+          </a>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if page.date %}
+        <div class="join join-vertical py-2">
+
+          <div class="btn btn-outline rounded-box no-animation join-item">Written - {{
+            pretty_date::render(date=page.date) }}</div>
+
+          {% if page.updated %}
+          <div class="btn btn-outline rounded-box no-animation join-item">Updated - {{
+            pretty_date::render(date=page.updated) }}</div>
+          {% endif %}
+
+
+
+          {% endif %}
+
+        </div>
+        <div class="py-2">
+          <i> Read time is about {{ page.reading_time }} minutes </i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ toc::render(page=page) }}
+
+<div class="flex flex-col justify-center">
+  <article class="prose prose-neutral lg:prose-xl prose-blockquote:{utility} px-2 max-w-none">
+    {{ page.content | safe }}
+  </article>
+</div>
+
+<div class="flex justify-center py-2">
+  {% if page.taxonomies.tags %}
+  <ul class="menu menu-vertical lg:menu-horizontal bg-secondary text-neutral rounded-box">
+    <li class="menu-title text-neutral">Read more with tag:</li>
+    {% for tag in page.taxonomies.tags %}
+    <li class="bg-secondary hover:bg-primary rounded-box">
+      <a href="{{ get_taxonomy_url(kind='tags', name=tag)}}">
+        {{ tag }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+</div>
+
+{% endblock %}

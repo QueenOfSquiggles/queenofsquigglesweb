@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% import "macros/post.html" as post %}
+{% import "macros/posts.html" as posts %}
+{% import "macros/paginator.html" as paginator %}
+{% import "macros/header.html" as header %}
+
+
+{% block content %}
+
+{% if section.title %}
+<h1>{{section.title}}</h1>
+{% endif %}
+
+{% if section.description %}
+<p>{{section.description}}</p>
+{% endif %}
+
+{% if section.content %}
+<div>{{section.content | safe}}</div>
+{% endif %}
+
+{{ posts::render(pages=paginator.pages) }}
+
+<div class="navbar justify-center">
+  {{paginator::render(paginator=paginator)}}
+</div>
+
+{% if section.extra.tags %}
+{{header::render(text=config.extra.tags)}}
+{% set tags = get_taxonomy(kind="tags") %}
+
+{% for item in tags.items %}
+<a class="text-decoration-none text-reset" href="{{item.permalink}}">{{item.name}}</a> |
+{% endfor %}
+{% endif %}
+
+{% endblock %}

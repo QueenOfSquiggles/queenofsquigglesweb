@@ -10,19 +10,16 @@ compile_sass = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
-theme = "zolastrap"
+theme = "queeny"
 
 generate_feeds = true
-feed_filenames = ["rss.xml"]
+feed_filenames = ["rss.xml", "atom.xml"]
 
 author = "Queen Of Squiggles"
 
 generate_robots_txt = true
 
-taxonomies = [
-  { name = "tags", feed = true, paginate_by = 15 },
-  # { name = "categories", feed = true },
-]
+taxonomies = [{ name = "tags", feed = true, paginate_by = 8 }]
 
 
 [slugify]
@@ -52,10 +49,8 @@ include_content = true
 
 [extra]
 # Put all your custom variables here
-theme = "cyborg"
 search = "Search"
-themes = ""                             # disables theme selection (which appears to be bugged anyway since forking the theme)
-schemes = ""                            # disables scheme selection becuase it's kinda confusing
+themes = ["light", "dark", "synthwave"]
 email = "thequeenofsquiggles@gmail.com"
 date_format = '%Y/%m/%d'
 

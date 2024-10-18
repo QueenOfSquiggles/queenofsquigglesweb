@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" data-theme="synthwave">
+
+<head>
+  {% block head %}
+  <title>{% block title %}{{config.title}}{% endblock %}</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+  {% if config.extra.mastodon != '' %}
+  <link rel="me" href="{{ config.extra.mastodon }}">
+  {% endif %}
+
+  <!-- Tailwind compiled CSS -->
+  <link rel="stylesheet" href="{{get_url(path='output.css')}}">
+  <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+
+  {% if config.build_search_index %}
+  <script defer src="{{get_url(path='elasticlunr.min.js')}}"></script>
+  <script defer src="{{get_url(path='search_index.en.js')}}"></script>
+  <script src="{{get_url(path='js/search.js')}}"></script>
+  {% endif %}
+
+  {% if config.generate_feeds %}
+  {% if config.feed_filenames is containing('rss.xml') %}
+  <!-- Includes the default RSS feed if enabled in configuration -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path='rss.xml', trailing_slash=false)
+}}">
+  {% endif %}
+  {% if config.feed_filenames is containing('atom.xml') %}
+  <!-- Includes the ddefault Atom feed if enabled in configuration -->
+  <link rel="alternate" type="application/atom+xml" title="Atom" href="{{ get_url(path='atom.xml', trailing_slash=false)
+}}" />
+  {% endif %}
+
+  {% endif %}
+  {% endblock %}
+</head>
+
+<body>
+  <div class="navbar bg-base-200 sticky top-0 z-50">
+    <div class="navbar-center lg:navbar-start">
+      <div class="hidden lg:flex">
+        <a class="btn btn-ghost text-xl" href="{{config.base_url}}">{{config.title}}</a>
+      </div>
+
+      <!-- small screen navbar (drop down) -->
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          {{config.title}}
+
+        </div>
+        <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-300 rounded-box z-[1] mt-3 w-52 p-2 shadow gap-4">
+          <li>
+            <a href="{{config.base_url}}">Home</a>
+          </li>
+          {% for link in config.extra.links %}
+          <li>
+            <a href="{% if not link.url is containing('://') %}{{config.base_url}}{% endif
+              %}{{link.url}}">{{link.title}}</a>
+          </li>
+          {% endfor %}
+          {% if config.extra.themes | length %}
+
+          <li class="dropdown">
+            <details>
+              <summary>Theme</summary>
+
+              <ul tabindex="0" class="dropdown-content bg-base-300 rounded-box z-[1] w-52 p-2 shadow-2xl">
+                {% for theme in config.extra.themes %}
+                <li>
+                  <input type="radio" name="theme-dropdown" class="theme-controller btn btn-ghost"
+                    aria-label="{{theme}}" value="{{theme}}" />
+                </li>
+                {% endfor %}
+
+              </ul>
+            </details>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+    <!-- large screen navbar -->
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        {% for link in config.extra.links %}
+        <li>
+          <a href="{% if not link.url is containing('://') %}{{config.base_url}}{% endif
+            %}{{link.url}}">{{link.title}}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% if config.extra.themes | length %}
+
+      <div class="flex-1 gap-2">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost">
+            Theme
+          </div>
+          <ul tabindex="0" class="dropdown-content bg-base-300 rounded-box z-[1] w-52 p-2 shadow-2xl">
+            {% for theme in config.extra.themes %}
+            <li>
+              <input type="radio" name="theme-dropdown"
+                class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="{{theme}}"
+                value="{{theme}}" />
+            </li>
+            {% endfor %}
+
+          </ul>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+
+    {% if config.build_search_index %}
+    <div class="navbar-end hidden lg:flex">
+      <form class="form-control lg:focus-within:grow" onsubmit="return goSearch(event)">
+        <input type="text" class="input input-bordered" placeholder="{{config.extra.search}}" />
+      </form>
+    </div>
+    {% endif %}
+  </div>
+
+  {% if config.build_search_index %}
+  <div class="navbar flex justify-center lg:hidden pb-4">
+    <form class="form-control" onsubmit="return goSearch(event)">
+      <input type="text" class="input input-bordered" placeholder="{{config.extra.search}}" />
+    </form>
+  </div>
+  {% endif %}
+
+  <main class="flex flex-col container mx-auto justify-center my-2">
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  {% block scripts %}
+  {% endblock %}
+
+  {% if config.extra.email or config.extra.icons | length %}
+  <footer class="footer bg-neutral text-neutral-content p-10 justify-center">
+    <aside>
+      {% if config.extra.email %}
+      <a href=" mailto:{{config.extra.email}}">{{config.extra.email}}</a>
+      {% endif %}
+    </aside>
+    {% if config.extra.icons | length %}
+    <nav>
+      <h6 class="footer-title">Socials</h6>
+      <div class="grid grid-flow-col gap-4">
+        {% for icon in config.extra.icons %}
+        <a class="flex-auto" href="{{icon.url}}" {% if icon.title %} title="{{icon.title}}" {% endif %}><i
+            class="{{icon.icon}}"></i></a>
+        {% endfor %}
+      </div>
+    </nav>
+    {% endif %}
+  </footer>
+  {% endif %}
+</body>
+
+</html>

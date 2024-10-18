@@ -21,7 +21,6 @@ extra:
     - wtdl-img-4.png
     - wtdl-img-5.png
 ---
-{{  project_links() }}
 
 ## Game Overview
 

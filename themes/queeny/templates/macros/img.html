@@ -1,0 +1,20 @@
+{% macro render(src, alt="") %}
+
+<div class="flex justify-center not-prose">
+    <div class="card card-compact shadow-2xl bg-neutral max-w-lg">
+        <figure>
+            <a href="{{src}}" target="_blank" rel="noopener noreferrer">
+                <img class="rounded-box shadow-md" src="{{src}}" alt="{{alt}}" title="{{alt}}" />
+            </a>
+        </figure>
+        <div class="card-body">
+            {% if alt %}
+            <p>
+                {{alt}}
+            </p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endmacro %}

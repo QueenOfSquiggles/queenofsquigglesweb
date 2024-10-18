@@ -1,0 +1,19 @@
+{% macro render(header, text, img, link) %}
+
+<div class="not-prose flex justify-center">
+	<div class="grow card bg-base-200 shadow-xl max-w-md">
+		<figure>
+			<img src="{{ get_url(path=page.colocated_path ~ img) }}" />
+		</figure>
+		<div class="card-body">
+			<h2> {{header}} </h2>
+			<small>
+				{{text}}
+			</small>
+			<div class="card-actions justify-end">
+				<a href="{{link}}" class="btn btn-primary">Read more</a>
+			</div>
+		</div>
+	</div>
+</div>
+{% endmacro %}

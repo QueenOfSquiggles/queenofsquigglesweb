@@ -1,9 +1,0 @@
-<div style="align-content: flex-start; flex-direction: row;">
-	<b>Project Links:</b>
-	<span style="width: 2%" />
-	{% for entry in page.extra.links -%}
-	<a href="{{entry.url}}" class="btn btn-primary" role="button" target="_blank">
-		{{ entry.label }}
-	</a>
-	{%- endfor %}
-</div>

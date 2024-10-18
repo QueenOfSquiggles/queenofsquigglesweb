@@ -1,0 +1,55 @@
+{% import "macros/image.html" as image %}
+{% import "macros/summary.html" as summary %}
+
+
+
+{% macro render(page, type="default") %}
+<div>
+  <div class="card card-compact md:card-normal w-96 flex flex-initial bg-base-300 shadow-xl rounded-box">
+
+    {% set img = page.extra.image | default(value="") %}
+    {% if img %}
+    <figure>
+      {{image::render(
+      src=get_url(path=page.path~img),
+      alt=page.title
+      )}}
+    </figure>
+    {% endif %}
+    <div class="card-body">
+      <h6 class="card-title">
+        <a href="{{page.permalink}}" rel="bookmark" title="{{page.title}}"><b>{{page.title}}</b></a>
+      </h6>
+      <div class="flex flex-wrap gap-1">
+        {% if page.updated %}
+        <div class="badge badge-outline"> Updated {{page.updated | date}} </div>
+        {% endif %}
+        {% if page.date %}
+        <div class="badge badge-outline"> {{page.date | date}} </div>
+        {% endif %}
+        <small class="text px-4"> <i>Read time {{page.reading_time}} minutes </i></small>
+      </div>
+
+      <div class="bg-base-100 rounded-box p-1 md:p-4 shadow-inner shadow-md">
+        {{summary::render(page=page)}}
+        <div class="flex justify-end">
+          <a class="link " href="{{page.permalink}}">...read more</a>
+        </div>
+      </div>
+
+      {% if page.taxonomies.tags %}
+      <div class="card-actions justify-end">
+        {% for tag in page.taxonomies.tags %}
+        <div class="badge">
+          <a href="{{config.base_url}}tags/{{tag}}/">
+            {{tag}}
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% endmacro %}
