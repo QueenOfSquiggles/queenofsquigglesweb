@@ -18,12 +18,13 @@ extra:
     - /images/fsm-vs-bt/hfsm_example.jpg
 ---
 
-{{ kofi_button() }}
+{{ kofi() }}
+
 
 > I'm trying out a different layout for this post so the text is easier to read. it looked super dense in the typical layout. Let me know what you think! If this style is ugly I might just change it back
->
+
 > I also activated full ["weeb"](https://en.wikipedia.org/wiki/Weeb_(disambiguation)) mode for this post. I can remove it if it detracts from people's enjoyment, but I'm hoping it makes reading this *even more enjoyable*.
->
+
 > update: the GIF inclusion can break *some* rss feeds. If you have the option to "load full text" that should fix it. Otherwise the actual website should work too.
 
 ## Wait...AI??
@@ -177,17 +178,12 @@ That hierarchy of state machines embedded into state machines is why it is calle
 
 Which, I would argue is rather ***elegant***
 
-<!-- {{ tenor(
-  data_postid="3561089886890940443",
-
-)}} -->
-
 {{ tenor(
   data_postid="3561089886890940443",
   data_aspect_ratio="1.56604",
-  url="<https://tenor.com/view/spy-x-family-elegant-elegance-gif-3561089886890940443>",
+  url="https://tenor.com/view/spy-x-family-elegant-elegance-gif-3561089886890940443",
   caption="Spy X Family character shouting 'elegant!'",
-  fallback="<https://media.tenor.com/MWuIYnle2BsAAAAd/spy-x-family-elegant.gif>"
+  fallback="https://media.tenor.com/MWuIYnle2BsAAAAd/spy-x-family-elegant.gif"
 )}}
 
 ## Pros and Cons
@@ -201,9 +197,9 @@ Behaviour trees are absolutely incredible at modelling more complex behaviours a
 {{ tenor(
  data_postid="26816185",
  data_aspect_ratio="1.77778",
- url='<https://tenor.com/view/yor-forger-spy-x-family-spy-x-family-season2-spy-x-family-part2-yor-gif-26816185>',
+ url='https://tenor.com/view/yor-forger-spy-x-family-spy-x-family-season2-spy-x-family-part2-yor-gif-26816185',
  caption="Yor from Spy X Family spinning a blade in a dark forest. It ends with her catching a falling flower at the very tip of the blade.",
- fallback="<https://media.tenor.com/mBgSW3COdJUAAAAd/yor-forger-spy-x-family.gif>"
+ fallback="https://media.tenor.com/mBgSW3COdJUAAAAd/yor-forger-spy-x-family.gif"
 )}}
 
 ### State Machine (FSM/HFSM) Pros
@@ -218,9 +214,9 @@ There is **so much boilerplate** to get a behaviour tree system up and running. 
  data_postid="245623370932004073",
  data_aspect_ratio="0.854839",
  width="50%",
- url='<https://tenor.com/view/anya-anya-forger-spy-x-family-brain-fried-gif-245623370932004073>',
+ url='https://tenor.com/view/anya-anya-forger-spy-x-family-brain-fried-gif-245623370932004073',
  caption="Anya from Spy X Family looking confused and burnt out",
- fallback="<https://media.tenor.com/A2ihJ4zvpOkAAAAC/anya-anya-forger.gif>"
+ fallback="https://media.tenor.com/A2ihJ4zvpOkAAAAC/anya-anya-forger.gif"
 )}}
 
 ### State Machine (FSM/HFSM) Cons
@@ -232,12 +228,12 @@ State Machines are much less resiliant to run-time changes because a run-time ch
 I really wish I could just tell you, "X is better than Y and Z, so just use that for everything." But that's not how this works. *Nothing is ever easy*. The lesson I hope you are taking from this article is that you need to find the right ***tool*** for the ***job***.
 
 {{ tenor(
- data_postid="23938460",
- data_aspect_ratio="1.77778",
+ data_postid="26158321",
+ data_aspect_ratio="1",
  width="50%",
- url='<https://tenor.com/view/tails-fork-gif-23938460>',
+ url='https://tenor.com/view/tails-speech-bubble-soup-gif-26158321',
  caption="Tails from Sonic Boom trying to eat soup with a fork and laughing",
- fallback="<https://media.tenor.com/CrTArJbznpoAAAAC/tails-fork.gif>"
+ fallback="https://media1.tenor.com/m/7W75SiCsuJUAAAAC/tails-speech-bubble.gif"
 )}}
 
 > In case you haven't noticed, I have emojis now! Thanks to a [jekyll plugin](https://github.com/jekyll/jemoji).
@@ -258,4 +254,4 @@ Here's some resources to learn more about particular AIs in games and how to use
 
 You might have noticed the GIFs I used in this post. I made a custom "include" type that I can use for my posts that specifically embeds any tenor GIF with a particular width and then centers it and adds a border. Optionally it can add a caption to the gif as well since I'm not sure how well tenor embedded gifs support captions. Plus that way if it fails to load, the meaning is still there. You can refer to my [Embedding GIFs](@/guides/embedding-gifs.md) page for details.
 
-{{ kofi_button() }}
+{{ kofi() }}

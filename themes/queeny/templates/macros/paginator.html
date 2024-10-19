@@ -1,18 +1,20 @@
 {% macro render(paginator)%}
 {% if paginator.number_pagers > 1 %}
-<div class="join">
+<div class="join shadow-md">
   {% for i in range(start=1, end=paginator.number_pagers+1) %}
-  <button class="
+  <a {% if i==paginator.current_index %} {% elif i> 1 %}
+    href="{{paginator.base_url}}{{i}}"
+    {% else %}
+    href="{{paginator.first}}"
+    {% endif %}
+    >
+    <button class="
           join-item btn
           {% if i == paginator.current_index %}btn-active{% endif %}
         ">
-    <a {% if i==paginator.current_index %} {% elif i> 1 %}
-      href="{{paginator.base_url}}{{i}}"
-      {% else %}
-      href="{{paginator.first}}"
-      {% endif %}
-      >{{i}}</a>
-  </button>
+      {{i}}
+    </button>
+  </a>
   {% endfor %}
   </nav>
   {% endif %}

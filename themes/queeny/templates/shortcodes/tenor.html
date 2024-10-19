@@ -5,72 +5,41 @@ data_postid: id of the post on tenor (take from embed code)
 data_aspect_ratio: the aspect ratio of the gif (take from embed code)
 url: embed url (take from embed code)
 width: a standard CSS width value to determine how big to display the gif at. (50% usually looks good)
-caption (optional): a text caption that will display below the image and serve as a link to the image.
+caption (optional): a text caption that will display below the image and serve as a link to the image. Supports markdown!
 ===
 Example Data:
 data_postid="8246706" 
 data_aspect_ratio="1.43103" 
-width="50%" 
 url='https://tenor.com/view/anime-goku-dbz-dragon-ball-super-saiyan-gif-8246706' 
 caption="Goku from Dragon Ball Z power up to 'super saiyin'" 
 fallback="https://media.tenor.com/XfrqyR_-jzIAAAAC/anime-goku.gif"
 
 -->
 <div class="flex justify-center">
-    <div class="not-prose card bg-neutral max-w-md">
+    <div class="not-prose card bg-base-200 max-w-md">
         <noscript>
             <figure>
                 <img src="{{fallback}}" />
             </figure>
         </noscript>
-        <div class="card-body m-2">
-            <div class="mask mask-squircle">
-
-                <div class="tenor-gif-embed" data-postid="{{ data_postid }}" data-share-method="host"
-                    data-aspect-ratio="{{ data_aspect_ratio }}" data-width="100%">
-                </div>
+        <div class="card-body mx-2">
+            <div class="tenor-gif-embed" data-postid="{{ data_postid }}" data-share-method="host"
+                data-aspect-ratio="{{ data_aspect_ratio }}" data-width="100%">
             </div>
             <script type="text/javascript" async src="https://tenor.com/embed.js">
             </script>
-            <noscript>
-                <p>
-                    <a href="{{ url }}">
-                        <b>GIF embed fallback in use. </b>
-                    </a>
-                </p>
-            </noscript>
-            <small>{{caption}}</small>
+            <div class="prose px-2 md:px-4">
+                <noscript>
+                    <p class="bg-info text-neutral not-prose rounded-box py-2 text-center">
+                        <i class="fas fa-solid fa-info"></i>
+                        <b>GIF embed fallback in use.</b>
+                        <a class="link" href="{{ url }}">
+                            Open remote
+                        </a>
+                    </p>
+                </noscript>
+                {{ caption | markdown | safe }}
+            </div>
         </div>
     </div>
 </div>
-
-<!--{#
-
-<div style="display: flex; flex-direction: column; justify-items: center; align-items: center; ">
-    <div class="{% if background %} bg-{{background}} {% else %} bg-secondary {% endif %} rounded"
-        style="width: 50%; padding: .5rem;">
-        <div class="tenor-gif-embed" data-postid="{{ data_postid }}" data-share-method="host"
-        data-aspect-ratio="{{ data_aspect_ratio }}" data-width="100%">
-        </div>
-    </div>
-    <div>
-
-        <script type="text/javascript" async src="https://tenor.com/embed.js">
-        </script>
-        <noscript>
-            <img src="{{ fallback }}" />
-            <p>
-                <a href="{{ url }}">
-                    <b>GIF embed fallback in use. </b>
-                </a>
-            </p>
-        </noscript>
-    </div>
-    <div class="{% if background %} btn-{{background}} {% else %} btn-secondary {% endif %} rounded-bottom"
-        style="padding: .5rem; max-width: 45%;">
-        <b>Caption: </b>
-        <i>{{ caption }}</i>
-    </div>
-</div>
-<br />
-#}-->

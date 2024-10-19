@@ -11,10 +11,14 @@ taxonomies:
 extra:
   image: demo_pbr.png
   gallery:
-  - fuzzy.gif
-  - demo_pbr.png
-  - demo_physics.gif
-  - demo_texture.gif
+  - url: fuzzy.gif
+    alt: Showing off how the fur reacts to motion (in a simulation of physics)
+  - url: demo_pbr.png
+    alt: The fur can handle PBR materials as well. Here it's a reflective gold, smoothed because it's using the base normals of the mesh instead of individual strands
+  - url: demo_physics.gif
+    alt: A little tool allows setting the stiffness of the strands along their length, which can create some interesting effects
+  - url: demo_texture.gif
+    alt: It also supports realtime texturing. In this example I used a noise map to make a weird cheetah print
 ---
 
 ## What happened???
@@ -30,7 +34,7 @@ Acerola's original video did a breakdown for how shell fur works and demonstrate
  data_aspect_ratio="1.43103",
  width="50%",
  url='https://tenor.com/view/anime-goku-dbz-dragon-ball-super-saiyan-gif-8246706',
- caption="Goku from Dragon Ball Z power up to 'super saiyin'",
+ caption="Goku from Dragon Ball Z power up to *super saiyin*",
  fallback="https://media.tenor.com/XfrqyR_-jzIAAAAC/anime-goku.gif"
 )}}
 
@@ -47,9 +51,9 @@ Of course I love games with style and I found that it can quite easily create st
  data_postid="16777119058470997423",
  data_aspect_ratio="0.985944",
  width="50%",
- url='<https://tenor.com/view/boykisser-gif-16777119058470997423>',
+ url='https://tenor.com/view/boykisser-gif-16777119058470997423',
  caption="The boykisser meme character smirking",
- fallback="<https://media.tenor.com/6NRM5QqZja8AAAAC/boykisser.gif>"
+ fallback="https://media.tenor.com/6NRM5QqZja8AAAAC/boykisser.gif"
 )}}
 
 ## So what did I do?
@@ -74,9 +78,9 @@ Next I took on working on different systems that could make the fur look nicer.
  data_postid="17657676",
  data_aspect_ratio="1.31687",
  width="50%",
- url='<https://tenor.com/view/wow-t-posing-spin-vocaloid-hatsune-miku-gif-17657676>',
+ url='https://tenor.com/view/wow-t-posing-spin-vocaloid-hatsune-miku-gif-17657676',
  caption="A Hatsune Miku model in a t-pose rotating",
- fallback="<https://media.tenor.com/EcSoC2eQGZMAAAAC/wow-t-posing.gif>"
+ fallback="https://media.tenor.com/EcSoC2eQGZMAAAAC/wow-t-posing.gif"
 )}}
 
 ### Shader improvements
@@ -93,9 +97,9 @@ So you may have noticed that the fur doesn't really do anything and just sticks 
  data_postid="17477970",
  data_aspect_ratio="1.39738",
  width="50%",
- url='<https://tenor.com/view/happy-cry-tears-of-joy-pokemon-team-tocket-gif-17477970>',
+ url='https://tenor.com/view/happy-cry-tears-of-joy-pokemon-team-tocket-gif-17477970',
  caption="James from Pokemon crying happy tears",
- fallback="<https://media.tenor.com/VAn-KzIfuvIAAAAC/happy-cry.gif>"
+ fallback="https://media.tenor.com/VAn-KzIfuvIAAAAC/happy-cry.gif"
 )}}
 
 Something that was really awesome for me when I first moved to Godot from Unity way back in 2020 (yeah I switched before it was cool) was the sheer quantity of useful resources available to be as a developer. And the ability to just export that and use it to manipulate stuff was incredible. They've only gotten better over time. Though `Curve` is definitely a classic. It's simply a curve that supports different handle types and can have multiple vertices as well. I generally used it for making a basic smoothstep function, but the curve resource is fully customizable to change the thickness of strands along their length.
@@ -132,9 +136,9 @@ Also if you are super cool and awesome, there might be a few "easter eggs" in th
  data_postid="22688840",
  data_aspect_ratio="1.95122",
  width="50%",
- url='<https://tenor.com/view/toradora-palm-top-tiger-taiga-aisaka-anime-gif-22688840>',
+ url='https://tenor.com/view/toradora-palm-top-tiger-taiga-aisaka-anime-gif-22688840',
  caption="Toradora laughing with the caption 'menace to society'",
- fallback="<https://media.tenor.com/8mUbihM7AJAAAAAC/toradora-palm-top-tiger.gif>"
+ fallback="https://media.tenor.com/8mUbihM7AJAAAAAC/toradora-palm-top-tiger.gif"
 )}}
 
 ## Future Plans
@@ -147,9 +151,9 @@ As this plugin is MIT licensed and fully open source, anyone is free to fork it 
  data_postid="25463727",
  data_aspect_ratio="1.09622",
  width="50%",
- url='<https://tenor.com/view/little-witch-academia-sucy-shrug-gif-25463727>',
+ url='https://tenor.com/view/little-witch-academia-sucy-shrug-gif-25463727',
  caption="Sucy from Little Witch Academia shrugging",
- fallback="<https://media.tenor.com/HtRb68DqNPwAAAAC/little-witch-academia-sucy.gif>"
+ fallback="https://media.tenor.com/HtRb68DqNPwAAAAC/little-witch-academia-sucy.gif"
 )}}
 
 ## Please I beg of you
@@ -158,9 +162,9 @@ As this plugin is MIT licensed and fully open source, anyone is free to fork it 
  data_postid="22150014",
  data_aspect_ratio="0.8625",
  width="50%",
- url='<https://tenor.com/view/adorable-pleading-eyes-anime-crying-gif-22150014>',
+ url='https://tenor.com/view/adorable-pleading-eyes-anime-crying-gif-22150014',
  caption="A young anime girl with a pleading look on her face (I don't know the character or anime lol)",
- fallback="<https://media.tenor.com/4q5OwnFZJdEAAAAC/adorable-pleading.gif>"
+ fallback="https://media.tenor.com/4q5OwnFZJdEAAAAC/adorable-pleading.gif"
 )}}
 
 If you use a plugin, even once, go tell the creator(s) that you used it. Tell them how you feel about it, especially if you really enjoyed it (And maybe keep things kind and constructive if you had a negative experience). It really means a lot. Frankly, everyone who creates things for others wants to know that people are enojying it. Can you imagine what it would be like if you published a game and the platform you published on didn't have comments, views, downloads, or anything for analytics??

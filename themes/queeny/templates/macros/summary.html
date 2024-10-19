@@ -8,6 +8,6 @@
   {% set page_preview = page.content | striptags | split(pat=" ") | slice(end=50) | join(sep=" ") %}
   {% endif %}
 
-  <small>{{page_preview}}</small>
+  <small class="prose prose-sm">{{page_preview | markdown(inline=true) | safe}}</small>
 </p>
 {% endmacro %}

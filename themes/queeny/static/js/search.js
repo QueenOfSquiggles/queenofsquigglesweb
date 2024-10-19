@@ -7,7 +7,7 @@ function goSearch(ev) {
   ev.preventDefault()
   ev.stopPropagation()
 
-  const term = ev.target 
+  const term = ev.target
     .closest('form')
     .querySelector('input[type="text"]')
     .value.trim()
@@ -31,28 +31,39 @@ function goSearch(ev) {
     }
   });
 
-  var info = '' 
+  var info = ''
   var data = ''
   if (results.length) {
     info = `Results for: ${term}`
     data = `
-      <ul class="list-group">${results.map(function (item) {
-        return `
-          <li class="list-group-item">
-            <a href="${item.ref}">${item.doc.title}</a>
-            <div>${makeTeaser(item.doc.body, terms)}</div>
+      <div class="flex justify-center">
+        <ul class="menu bg-base-200 shadow-x rounded-box divide-y divide-dotted">
+        ${results.map(function (item) {
+      return `
+          <li class="prose py-2">
+            <div class="flex flex-row flex-wrap md:flex-nowrap gap-4">
+              <a href="${item.ref}">
+                <h1>${item.doc.title}</h1>
+              </a>
+              <div class="bg-base-100 p-4 rounded-box">
+                ${makeTeaser(item.doc.body, terms)}
+              </div>
+            </div>
           </li>
-        `
-      }).join("")}</ul>
+          `
+    }).join("")}
+        </ul>
+    </div>
     `
   } else {
     info = `No results for: ${term}`
   }
 
   var html = `
-    <h1>
+  <div class="flex justify-center">
+    <h1 class=py-2>
       <button 
-        class="btn btn-link"
+        class="btn btn-accent rounded-full"
         type="button"
         onclick="closeSearch()"
       >
@@ -60,6 +71,7 @@ function goSearch(ev) {
       </button>
       ${info}
     </h1>
+    </div>
     ${data}
   `
 

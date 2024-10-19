@@ -7,13 +7,13 @@
                 <img class="rounded-box shadow-md" src="{{src}}" alt="{{alt}}" title="{{alt}}" />
             </a>
         </figure>
+        {% if alt %}
         <div class="card-body">
-            {% if alt %}
-            <p>
-                {{alt}}
+            <p class="prose">
+                {{ alt | markdown(inline=true) | safe }}
             </p>
-            {% endif %}
         </div>
+        {% endif %}
     </div>
 </div>
 

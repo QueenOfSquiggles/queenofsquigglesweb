@@ -6,18 +6,21 @@
 
 
 {% block content %}
+<div class="container mx-auto prose">
 
-{% if section.title %}
-<h1>{{section.title}}</h1>
-{% endif %}
+  {% if section.title %}
+  <h1>{{section.title}}</h1>
+  {% endif %}
 
-{% if section.description %}
-<p>{{section.description}}</p>
-{% endif %}
+  {% if section.description %}
+  <p>{{section.description}}</p>
+  {% endif %}
 
-{% if section.content %}
-<div>{{section.content | safe}}</div>
-{% endif %}
+  {% if section.content %}
+  <div>{{section.content | safe}}</div>
+  {% endif %}
+
+</div>
 
 {{ posts::render(pages=paginator.pages) }}
 

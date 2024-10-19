@@ -67,7 +67,7 @@ The game was made for the "Compo" version of the jam, which is 48 hours long ins
 {{ itch(
   id="1726321",
   dark=true,
-  url="<https://queenofsquiggles.itch.io/this-metal-heart-still-beats>",
+  url="https://queenofsquiggles.itch.io/this-metal-heart-still-beats",
   tagline="This Metal Heart Still Beats by QueenOfSquiggles"
 )}}
 

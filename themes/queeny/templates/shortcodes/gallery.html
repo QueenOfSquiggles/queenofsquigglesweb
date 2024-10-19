@@ -1,16 +1,16 @@
 {% import "macros/img.html" as img %}
 {% set width = 320 %}
-<div class="flex flex-row flex-wrap container mx-auto gap-4 justify-center">
+<div class="flex flex-row flex-wrap bg-base-200 p-2 rounded-box container mx-auto gap-4 justify-center">
     {% for asset in page.extra.gallery -%}
     {#
-    if the gallery is a ma of 'path' and 'alt', extract. Default to expect the root value to be the path for convenience
+    if the gallery is a map of 'url' and 'alt', extract. Default to expect the root value to be the path for convenience
     #}
-    {% set asset_path = asset.path | default(value=asset) %}
+    {% set asset_path = asset.url | default(value=asset) %}
     {% set asset_alt = asset.alt | default(value="") %}
 
-    <a href="{{ get_url(path=page.colocated_path ~ asset) }}" target="_blank">
+    <a href="{{ get_url(path=page.colocated_path ~ asset_path) }}" target="_blank">
 
-        {%- if asset is matching("[.](jpg|png)$") -%}
+        {%- if asset_path is matching("[.](jpg|png)$") -%}
 
         {# Formatted types: JPG, PNG #}
 

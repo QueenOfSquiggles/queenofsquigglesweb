@@ -8,7 +8,7 @@
 		<div class="card-body">
 			<h2> {{header}} </h2>
 			<small>
-				{{text}}
+				{{text | markdown(inline=true) | safe}}
 			</small>
 			<div class="card-actions justify-end">
 				<a href="{{link}}" class="btn btn-primary">Read more</a>

@@ -132,7 +132,7 @@ For my next project, I'm planning on making a shell script to run through pushin
 {{ itch(
   id="1900264",
   dark=true,
-  url="<https://queenofsquiggles.itch.io/where-the-dead-lie>",
+  url="https://queenofsquiggles.itch.io/where-the-dead-lie",
   tagline="Where The Dead Lie by QueenOfSquiggles"
 
 )}}

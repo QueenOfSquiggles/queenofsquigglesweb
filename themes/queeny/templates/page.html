@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% import "macros/toc.html" as toc %}
 {% import "macros/pretty_date.html" as pretty_date %}
+{% import "macros/img.html" as img %}
+
 {% block title %}
 
 {{page.title}} | {{config.title}}
@@ -8,63 +10,81 @@
 {% endblock %}
 
 {% block content %}
-
-<div class="hero bg-base-200 lg:min-h-screen rounded-box">
-  <div class="hero-content flex-col lg:flex-row-reverse">
-    {% if page.extra.image %}
-    <img src="{{ page.extra.image }}" class="container mx-auto rounded-lg shadow-2xl" />
-    {% endif %}
-    <div>
-      <h1 class="text-5xl font-bold"> {{page.title}} </h1>
-      <div class="py-6">
-        {% if page.taxonomies.tags %}
-        <div class="flex flex-row flex-wrap gap-4  py-2">
-          {% for tag in page.taxonomies.tags %}
-          <a href="{{ get_taxonomy_url(kind='tags', name=tag)}}" class="btn btn-secondary rounded-box">
-            {{ tag }}
-          </a>
-          {% endfor %}
-        </div>
-        {% endif %}
-        {% if page.extra.links %}
-        <div class="flex flex-row flex-wrap gap-4 py-2">
-          {% for entry in page.extra.links %}
-          <a href=" {{entry.url}}" class="btn btn-primary rounded-box" role="button" target="_blank"
-            rel="noopener noreferrer">
-            {{ entry.label }}
-          </a>
-          {% endfor %}
-        </div>
-        {% endif %}
-
-        {% if page.date %}
-        <div class="join join-vertical py-2">
-
-          <div class="btn btn-outline rounded-box no-animation join-item">Written - {{
-            pretty_date::render(date=page.date) }}</div>
-
-          {% if page.updated %}
-          <div class="btn btn-outline rounded-box no-animation join-item">Updated - {{
-            pretty_date::render(date=page.updated) }}</div>
+<div class="flex flex-row flex-wrap lg:flex-nowrap w-full justify-center gap-1 py-2">
+  <div class=" hero container mx-auto bg-base-200 rounded-box">
+    <div class="hero-content flex-col lg:flex-col">
+      {% if page.extra.image %}
+      {{ img::render(src=page.extra.image) }}
+      {% endif %}
+      <div>
+        <h1 class="text-5xl font-bold"> {{page.title}} </h1>
+        <div class="py-6">
+          {% if page.taxonomies.tags %}
+          <div class="flex flex-row flex-wrap gap-4  py-2">
+            {% for tag in page.taxonomies.tags %}
+            <a href="{{ get_taxonomy_url(kind='tags', name=tag)}}" class="btn btn-secondary rounded-box">
+              {{ tag }}
+            </a>
+            {% endfor %}
+          </div>
+          {% endif %}
+          {% if page.extra.links %}
+          <div class="flex flex-row flex-wrap gap-4 py-2">
+            {% for entry in page.extra.links %}
+            <a href=" {{entry.url}}" class="btn btn-primary rounded-box" role="button" target="_blank"
+              rel="noopener noreferrer">
+              {{ entry.label }}
+            </a>
+            {% endfor %}
+          </div>
           {% endif %}
 
+          {% if page.date %}
+          <div class="join join-vertical py-2">
+
+            <div class="btn btn-outline rounded-box no-animation join-item leading-relaxed">Written - {{
+              pretty_date::render(date=page.date) }}</div>
+
+            {% if page.updated %}
+            <div class="btn btn-outline rounded-box no-animation join-item leading-relaxed">Updated - {{
+              pretty_date::render(date=page.updated) }}</div>
+            {% endif %}
 
 
-          {% endif %}
 
-        </div>
-        <div class="py-2">
-          <i> Read time is about {{ page.reading_time }} minutes </i>
+            {% endif %}
+
+          </div>
+          <div class="py-2">
+            <i> Read time is about {{ page.reading_time }} minutes </i>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  <div class="container mx-auto max-w-md">
+    {{ toc::render(page=page) }}
+  </div>
+
 </div>
 
-{{ toc::render(page=page) }}
+<div class="static">
+  <div class="fixed bottom-4 md:bottom-8 start-4 md:start-8 ">
+    <div class="tooltip" data-tip="Return to top">
+      <a class="btn bg-neutral aspect-square rounded-full shadow-md" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+          <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path fill="#FFFFFF"
+            d="M32 448c-17.7 0-32 14.3-32 32s14.3 32 32 32l96 0c53 0 96-43 96-96l0-306.7 73.4 73.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 109.3 160 416c0 17.7-14.3 32-32 32l-96 0z" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
 
 <div class="flex flex-col justify-center">
-  <article class="prose prose-neutral lg:prose-xl prose-blockquote:{utility} px-2 max-w-none">
+  <article
+    class="prose prose-neutral lg:prose-xl px-2 max-w-none prose-blockquote:rounded-r-lg prose-blockquote:shadow-2xl prose-blockquote:bg-base-200 prose-blockquote:p-2">
     {{ page.content | safe }}
   </article>
 </div>

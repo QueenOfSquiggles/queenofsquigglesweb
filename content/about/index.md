@@ -5,6 +5,8 @@ summary: My portfolio
 path: about
 template: about.html
 date: 2024-01-15
+updated: 2024-10-19
+in_search_index: false
 images:
 - /images/gruesome-claim/couch.png
 ---

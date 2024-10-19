@@ -118,7 +118,7 @@ I think like many of my projects, this game served as an opportunity for me to l
 {{ itch(
   id="1562397",
   dark=true,
-  url="<https://queenofsquiggles.itch.io/the-ascension-of-the-lamb>",
+  url="https://queenofsquiggles.itch.io/the-ascension-of-the-lamb",
   tagline="The Ascension Of The Lamb by QueenOfSquiggles"
 )}}
 
